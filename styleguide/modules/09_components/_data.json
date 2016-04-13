@@ -1,0 +1,26 @@
+{
+    "id": "components",
+    "name": "Components",
+    "hasScript": "yes",
+    "items": {
+        "intro": ["Modular components that make up the Code Clubs Application"],
+        "lessons": [
+            {
+                "grade": "grade 6",
+                "time": "Time: ~20 minutes", 
+                "level": "Level: 3",
+                "title": "The Lesson Title: It Will Be Great!", 
+                "description": "it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", 
+                "likes":"12"
+            },
+            {
+                "grade": "grade 3",
+                "time": "Time: ~20 minutes", 
+                "level": "Level: 2",
+                "title": "The Lesson Title: Another Good One", 
+                "description": "it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", 
+                "likes":"12"
+            }
+        ]
+    }
+}

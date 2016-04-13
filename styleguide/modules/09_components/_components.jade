@@ -1,0 +1,18 @@
+h2.huge-module__title=name
+each paragraph in items.intro
+	p.huge-module__paragraph!=paragraph
+each lesson, index in items.lessons
+	div.container.container--flex.container--lesson.snippet
+		div.lesson.col--two
+			div.lesson--bar
+				span #{lesson.grade}
+			div.lesson--title
+				span
+					p #{lesson.time}	
+					p #{lesson.level}
+				h2 #{lesson.title}	
+			div.lesson--short-description
+				p #{lesson.description}
+				a.button.button--primary Learn More	
+				span.lesson--likes ♡ #{lesson.likes}
+				//- a.lesson--short-description

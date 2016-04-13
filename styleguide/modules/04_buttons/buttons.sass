@@ -1,0 +1,35 @@
+$black : #333
+
+.button
+	:cursor pointer
+	:text-decoration none 
+	:display inline-block
+	:font-weight bold
+	:text-align center
+	:color $black
+	:border 1px solid $black
+	:-webkit-transition background-color 0.3s,opacity 0.3s
+	:-moz-transition background-color 0.3s,opacity 0.3s
+	:-o-transition background-color 0.3s,opacity 0.3s
+	:transition background-color 0.3s,opacity 0.3s
+
+.button--primary
+	:font-size 10px
+	:text-transform uppercase
+	:color $black
+	:border 2px solid $black
+	:border-radius 3px
+	:padding 5px 14px
+	:line-height 15px
+	:background white
+
+.button--secondary
+	:border 2px solid $black
+	:border-radius 5px
+	:text-transform uppercase
+	:padding 2px 12px
+
+#buttons 
+	.button 
+		:margin-bottom 20px	
+

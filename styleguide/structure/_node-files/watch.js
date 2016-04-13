@@ -19,12 +19,14 @@ portfinder.getPort(function (err, port) {
 
     // Initialize Harp
     exec('cd ' + utils.basePath + '&& harp server --port ' + PORT, utils.puts);
-    if (!INTEGRATION_TEST) exec('echo "Starting Server on port ' + PORT + '.." && echo "PROGRESS:94"', utils.puts);
+    if (!INTEGRATION_TEST) exec('echo "Starting Server on port ' + utils.basePath + '.." && echo "PROGRESS:94"', utils.puts);
     waitTheServer();
 });
 
 function waitTheServer() {
     if(waitingTheServer) {
+        // var PORT = 7000
+        // exec('echo "PORT ' + PORT + '"' , utils.puts);
         http.get({
             host: '127.0.0.1',
             port: PORT,
@@ -42,6 +44,7 @@ function waitTheServer() {
             waitTheServer();
         }).on('error', function(e) {
             // Nothing
+            // exec('echo "PORT ' + e + '"' , utils.puts);
             waitingTheServer = true;
             waitTheServer();
         });

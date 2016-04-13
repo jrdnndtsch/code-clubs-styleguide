@@ -1,0 +1,15 @@
+{
+	"id": "buttons",
+	"name": "Buttons",
+	"hasScript": "yes",
+	"items": [
+	    {
+	        "buttonName" : "Load more",
+	        "className": "button button--primary"
+	    },
+	    {
+	    	"buttonName" : "subscribe",
+	    	"className": "button button--secondary font-quicksand"
+	    }
+	]
+}

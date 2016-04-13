@@ -1,0 +1,90 @@
+//grid columns
+$grid-base: 40
+
+=make-column($columns, $grid: $grid-base)
+	:box-sizing border-box
+	:width percentage($columns / $grid)
+
+=make-gutter($left-gutter: 0, $right-gutter: 0, $grid: $grid-base)
+	:margin-left percentage($left-gutter / $grid)
+	:margin-right percentage($right-gutter / $grid)
+
+//adaptive screen sizes
+%make-adaptive
+  @media screen and (min-width: 1170px)
+    // XL
+    :width 1146px
+    :margin
+      :left 12px
+      :right 12px
+  @media screen and (min-width: 960px) and (max-width: 1169px)
+    // LG
+    :width 936px
+    :margin
+      :left 12px
+      :right 12px
+  @media screen and (min-width: 768px) and (max-width: 959px)
+    // MD
+    :width 744px
+    :margin
+      :left 12px
+      :right 12px
+  @media screen and (min-width: 500px) and (max-width: 767px)
+    // SM
+    :width 480px
+    :margin
+      :left 12px
+      :right 12px
+  @media screen and (max-width: 499px)
+    // XS
+    :width auto
+    :margin-left 8px
+    :margin-right 8px
+
+//break poitn display mixin
+=display-for($size: false)
+	@each $screen in $size
+		@if $screen == xl
+			@media screen and (min-width: 1170px)
+				@content
+		@else if $screen == lg
+			@media screen and (min-width: 960px) and (max-width: 1169px)
+				@content
+		@if $screen == md
+			@media screen and (min-width: 768px) and (max-width: 959px)
+				@content
+		@else if $screen == sm
+			@media screen and (min-width: 500px) and (max-width: 767px)
+				@content
+		@else if $screen == xs
+			@media screen and (max-width: 499px)
+				@content
+
+//container wrapper
+// .container
+// 	@extend %make-adaptive
+// 	:box-sizing border-box
+// 	:position relative
+// 	+display-for(xl lg md sm)
+// 		:margin 0 auto
+// 	+display-for(xs)
+// 		:margin 0
+// 		:padding 0 $xs-margin		
+// 	&--flex
+// 		:display flex
+// 		:align-items stretch 
+// 		:flex-wrap wrap
+// 		:flex 1 0 50%
+// 		:justify-content space-between
+
+
+.container--style-guide
+	ul 
+		:display flex
+		:justify-content space-between
+	li 
+		:height 100px
+		:background lightgrey
+		+make-column(9)
+		&:nth-of-type(2n + 1)
+			:background rgba(0,0,0,0.1)
