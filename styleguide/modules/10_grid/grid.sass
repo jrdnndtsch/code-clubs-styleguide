@@ -61,28 +61,28 @@ $grid-base: 40
 				@content
 
 //container wrapper
-// .container
-// 	@extend %make-adaptive
-// 	:box-sizing border-box
-// 	:position relative
-// 	+display-for(xl lg md sm)
-// 		:margin 0 auto
-// 	+display-for(xs)
-// 		:margin 0
-// 		:padding 0 $xs-margin		
-// 	&--flex
-// 		:display flex
-// 		:align-items stretch 
-// 		:flex-wrap wrap
-// 		:flex 1 0 50%
-// 		:justify-content space-between
+.wrapper
+	@extend %make-adaptive
+	:box-sizing border-box
+	:position relative
+	+display-for(xl lg md sm)
+		:margin 0 auto
+	+display-for(xs)
+		:margin 0
+		:padding 0 12px
+	&--flex
+		:display flex
+		:align-items stretch
+		:flex-wrap wrap
+		:flex 1 0 50%
+		:justify-content space-between
 
 
 .container--style-guide
-	ul 
+	ul
 		:display flex
 		:justify-content space-between
-	li 
+	li
 		:height 100px
 		:background lightgrey
 		+make-column(9)
