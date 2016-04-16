@@ -1,0 +1,8 @@
+{
+    "id": "as",
+    "name": "Special Cases",
+    "hasScript": "yes",
+    "items": {
+        "disabled" : "Disabled"
+    }
+}

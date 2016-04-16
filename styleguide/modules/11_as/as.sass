@@ -1,0 +1,27 @@
+$green : #00a076
+.as--home-form
+  select
+    :width 100%
+    :background $green
+    :color white
+    :font-size 18px
+    :font-weight bold
+    :text-transform uppercase
+    :box-shadow -2px 2px 0 0 lighten($green, 10%)
+
+  .select
+    :position relative
+    :width 30%
+    :margin-bottom 40px
+    &:after
+      :content '\25BC'
+      :position absolute
+      :right 14px
+      :top 34%
+      :color white
+      :font-size 12px
+      :pointer-events none
+
+  input[type=submit]
+    :display block
+    :width 100%
