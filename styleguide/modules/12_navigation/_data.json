@@ -1,0 +1,8 @@
+{
+    "id": "navigation",
+    "name": "Navigation",
+    "hasScript": "yes",
+    "items": {
+        "disabled" : "Disabled"
+    }
+}
