@@ -1,4 +1,5 @@
 $black: #333
+@import '../02_colors/colors.sass'
 .nav--main
   :background $black
   :padding 12px 0
@@ -34,3 +35,24 @@ $black: #333
       :height 32px
       :border-radius 50%
       :margin-left 10px
+
+footer.nav--footer
+  :background white
+  :padding 40px
+  h3
+    :margin-top 0
+  ul
+    :width 30%
+    :border-right 1px solid grey
+    &:last-of-type
+      :padding-left 28px
+    a, input[type=submit]
+      :color $green
+      :font-size 12px
+      :text-transform uppercase
+      &:hover
+        :color #4d4d4d
+    input[type=submit]
+      :border none
+      :background transparent
+      :padding 0

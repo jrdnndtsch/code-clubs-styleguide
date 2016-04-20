@@ -77,7 +77,10 @@ $grid-base: 40
 		// :flex 1 0 50%
 		// :justify-content space-between
 		:flex-flow row wrap
-
+.wrapper--flex.tab-content
+	:display none
+.wrapper--flex.tab-content.current
+	:display flex
 
 
 .container--style-guide
@@ -90,3 +93,6 @@ $grid-base: 40
 		+make-column(9)
 		&:nth-of-type(2n + 1)
 			:background rgba(0,0,0,0.1)
+
+img
+	:max-width 100%
