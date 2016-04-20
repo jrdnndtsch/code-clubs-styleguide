@@ -1,0 +1,8 @@
+{
+    "id": "textedit",
+    "name": "Text Editor",
+    "hasScript": "yes",
+    "items": {
+        "disabled" : "Disabled"
+    }
+}

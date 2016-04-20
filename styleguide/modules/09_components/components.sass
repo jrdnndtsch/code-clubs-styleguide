@@ -95,6 +95,12 @@ $purple: rgba(93, 88, 129, 1)
 			&:hover
 				:border 2px solid $green
 				:color $green
+		.lesson--single-title-bar
+			:background $green
+		.list--tags
+			li
+				:background $green		
+
 	&-2
 		.lesson--bar
 			:background $blue
@@ -104,6 +110,12 @@ $purple: rgba(93, 88, 129, 1)
 			&:hover
 				:border 2px solid $blue
 				:color $blue
+		.lesson--single-title-bar
+			:background $blue
+		.list--tags
+			li
+				:background $blue
+
 	&-3
 		.lesson--bar
 			:background $purple
@@ -113,6 +125,12 @@ $purple: rgba(93, 88, 129, 1)
 			&:hover
 				:border 2px solid $purple
 				:color $purple
+		.lesson--single-title-bar
+			:background $purple
+		.list--tags
+			li
+				:background $purple
+
 	&-4
 		.lesson--bar
 			:background $green-dark
@@ -122,19 +140,31 @@ $purple: rgba(93, 88, 129, 1)
 			&:hover
 				:border 2px solid $green-dark
 				:color $green-dark
+		.lesson--single-title-bar
+			:background $green-dark
+		.list--tags
+			li
+				:background $green-dark
 
-.lesson--single
+.lesson--single-title-bar
+	:width 70%
+	:border-top-left-radius 5px
+	:padding 25px
+	:color white
+.lesson--single-text
 	:background white
 	:width 70%
-	:padding 0 25px
+	:border-bottom-left-radius 5px
+	:padding 25px
+.lesson--single-title-img
+	:width 30%
 	:border-top-right-radius 5px
-	:border-bottom-right-radius 5px
-
+	:background-size cover
+	:background-position center
+	:background-repeat no-repeat
 .sidebar
 	:width 30%
 	:background #dee6e1
-	:border-bottom-left-radius 5px
-	img
-		:border-top-left-radius 5px
+	:border-bottom-right-radius 5px
 	&--text
 		:padding 25px

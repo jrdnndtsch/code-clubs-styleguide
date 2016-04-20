@@ -1,11 +1,11 @@
 $green : #00a076
 
-ol, ul 
+ol, ul
 	:margin 0 0 12px 0
 	:padding 0
 	:list-style none
-ul.list 
-	li 
+ul.list
+	li
 		:padding-left 20px
 		:position relative
 		&:before
@@ -16,19 +16,37 @@ ul.list
 			:position absolute
 			:left 0
 			:line-height 30px
-ol.list 
-	li 
+ol.list
+	li
 		:counter-increment step-counter
 		:padding-left 20px
 		:position relative
-		&:before 
+		&:before
 			:content counter(step-counter)
 			:position absolute
 			:top 0
 			:left 0
 			:color $green
 
-
+ul.list--tags
+	.title
+		:display block
+		:background transparent !important
+		:color #333
+		:padding 0
+		:text-transform capitalize
+		:margin-bottom 10px
+		:font-size 20px
+	li
+		:padding 4px 6px
+		:background $green
+		:color white
+		:text-transform uppercase
+		:display inline-block
+		:margin-right 4px
+		:margin-bottom 4px
+		&:last-of-type
+			:margin-right 0
 
 // ol, ul {
 // 	list-style: none;
