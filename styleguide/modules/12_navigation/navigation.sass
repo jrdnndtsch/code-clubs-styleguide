@@ -1,5 +1,6 @@
 $black: #333
 @import '../02_colors/colors.sass'
+@import '../10_grid/grid.sass'
 .nav--main
   :background $black
   :padding 12px 0
@@ -44,6 +45,10 @@ footer.nav--footer
   .email-form
     :width 40%
     :padding-left 28px
+    +display-for(sm xs)
+      :padding-left 0
+      :padding 20px 0
+      :width 100%
     input
       :width 80%
     input[type=email]
@@ -56,6 +61,13 @@ footer.nav--footer
     :border-right 1px solid grey
     &:last-of-type
       :padding-left 28px
+      +display-for(sm xs)
+        :padding-left 0
+    +display-for(sm xs)
+      :width 100%
+      :border-right none
+      :border-bottom 1px solid grey
+      :padding 20px 0
     a, input[type=submit]
       :color $green
       :font-size 12px
