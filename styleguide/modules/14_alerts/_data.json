@@ -1,0 +1,8 @@
+{
+    "id": "alerts",
+    "name": "Alert Messages",
+    "hasScript": "yes",
+    "items": {
+        "disabled" : "Disabled"
+    }
+}

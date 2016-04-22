@@ -1,0 +1,78 @@
+select {
+    padding: 10px 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    font-size: 14px;
+    background: lightgrey;
+    border-radius: 5px
+}
+
+input {
+    width: 100%;
+    padding: 6px 4px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 16px
+}
+
+input[type=checkbox] {
+    width: auto
+}
+
+.hint {
+    margin-top: -10px;
+    display: block;
+    margin-bottom: 10px
+}
+
+.wrapper.form--new-lesson {
+    border-radius: 5px;
+    background: white;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+.wrapper.form--new-lesson textarea {
+    height: 300px;
+    border: 1px solid #333;
+    border-radius: 5px
+}
+
+.wrapper.form--new-lesson input[type=submit] {
+    border: none
+}
+
+.wrapper.form--new-lesson img {
+    margin-bottom: 16px
+}
+
+.wrapper.form--new-lesson .textarea-description textarea {
+    height: 200px
+}
+
+.wrapper.form--new-lesson .textarea-content textarea {
+    height: 700px
+}
+
+.wrapper.form--new-lesson .wrapper--flex {
+    border-radius: 5px
+}
+
+.wrapper.form--new-lesson .content {
+    width: 70%;
+    padding: 25px
+}
+
+.wrapper.form--new-lesson .sidebar {
+    padding: 25px;
+    border-top-right-radius: 5px
+}
+
+.wrapper.form--new-lesson .sidebar .levels input {
+    margin: 0;
+    width: 10%;
+    text-align: left;
+    margin-bottom: 10px
+}

@@ -1,0 +1,84 @@
+.green {
+    background: #00a076
+}
+
+.red {
+    background: red
+}
+
+#colors li {
+    position: relative;
+    padding: 0;
+    margin-bottom: 0.9375em
+}
+
+#colors li p {
+    position: absolute;
+    padding: 3px 13px;
+    color: #666;
+    background-color: #fff;
+    font-size: 12px;
+    bottom: 0;
+    left: 0.9375em
+}
+
+#colors li .color {
+    height: 120px;
+    margin-right: 0.9375em
+}
+
+#colors li:last-child {
+    margin-right: 0
+}
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    border: 1px solid #333;
+    background: transparent;
+    -webkit-transition: background-color 0.3s, opacity 0.3s;
+    transition: background-color 0.3s, opacity 0.3s;
+    margin-bottom: 16px
+}
+
+.button--primary {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 3px;
+    padding: 5px 14px;
+    line-height: 15px;
+    background: white
+}
+
+.button--secondary {
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    font-size: 20px
+}
+
+.button--tertiary {
+    background: #00a076;
+    color: white;
+    text-transform: uppercase;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #00a076
+}
+
+.button--large {
+    padding: 10px 12px;
+    font-size: 20px
+}
+
+#buttons .button {
+    margin-bottom: 20px
+}
