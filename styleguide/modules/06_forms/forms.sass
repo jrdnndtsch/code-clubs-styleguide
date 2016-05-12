@@ -1,3 +1,4 @@
+@import '../10_grid/grid.sass'
 select
 	:padding 10px 20px
 	:appearance none
@@ -48,6 +49,8 @@ input[type=checkbox]
 	.sidebar
 		:padding 25px
 		:border-top-right-radius 5px
+		+display-for(sm xs)
+			:border-top-right-radius 0px
 		.levels
 			input
 				:margin 0

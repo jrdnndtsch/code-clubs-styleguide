@@ -31,6 +31,16 @@
     margin-right: 0
 }
 
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
 @media screen and (min-width:1170px) {
     .wrapper {
         width: 1146px
@@ -140,6 +150,14 @@
     display: flex
 }
 
+.wrapper--secondary {
+    background: white;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
 .container--style-guide ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -167,7 +185,7 @@ img {
 }
 
 .nav--main {
-    background: #333;
+    background: #1a1a1a;
     padding: 12px 0;
     color: white;
     line-height: 30px
@@ -184,6 +202,24 @@ img {
     font-size: 20px
 }
 
+@media screen and (min-width:500px) and (max-width:767px) {
+    .nav--main .logo {
+        z-index: 20;
+        display: block
+    }
+}
+
+@media screen and (max-width:499px) {
+    .nav--main .logo {
+        z-index: 20;
+        display: block
+    }
+}
+
+.nav--main .logo a {
+    text-transform: lowercase
+}
+
 .nav--main .logo span {
     font-size: 20px;
     vertical-align: middle;
@@ -196,19 +232,114 @@ img {
 }
 
 .nav--main .nav--links {
-    float: right;
     font-size: 12px;
-    font-weight: light
+    font-weight: 100
+}
+
+@media screen and (min-width:1170px) {
+    .nav--main .nav--links {
+        float: right
+    }
+}
+
+@media screen and (min-width:960px) and (max-width:1169px) {
+    .nav--main .nav--links {
+        float: right
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:959px) {
+    .nav--main .nav--links {
+        float: right
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:767px) {
+    .nav--main .nav--links {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        background: #1a1a1a;
+        display: none;
+        height: 100vh;
+        padding-top: 20vh
+    }
+}
+
+@media screen and (max-width:499px) {
+    .nav--main .nav--links {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        background: #1a1a1a;
+        display: none;
+        height: 100vh;
+        padding-top: 20vh
+    }
 }
 
 .nav--main .nav--links a {
     color: rgba(255, 255, 255, 0.5);
     line-height: 33px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2)
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out
 }
 
-.nav--main .nav--links a:last-of-type {
-    border: none
+@media screen and (min-width:1170px) {
+    .nav--main .nav--links a {
+        border-right: 1px solid rgba(255, 255, 255, 0.2)
+    }
+    .nav--main .nav--links a:last-of-type {
+        border: none
+    }
+}
+
+@media screen and (min-width:960px) and (max-width:1169px) {
+    .nav--main .nav--links a {
+        border-right: 1px solid rgba(255, 255, 255, 0.2)
+    }
+    .nav--main .nav--links a:last-of-type {
+        border: none
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:959px) {
+    .nav--main .nav--links a {
+        border-right: 1px solid rgba(255, 255, 255, 0.2)
+    }
+    .nav--main .nav--links a:last-of-type {
+        border: none
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:767px) {
+    .nav--main .nav--links a {
+        display: block;
+        width: 100%;
+        padding: 20px 10px;
+        font-size: 32px;
+        color: white;
+        text-align: center
+    }
+    .nav--main .nav--links a:hover {
+        color: rgba(255, 255, 255, 0.6)
+    }
+}
+
+@media screen and (max-width:499px) {
+    .nav--main .nav--links a {
+        display: block;
+        width: 100%;
+        padding: 20px 10px;
+        font-size: 32px;
+        color: white;
+        text-align: center
+    }
+    .nav--main .nav--links a:hover {
+        color: rgba(255, 255, 255, 0.6)
+    }
 }
 
 .nav--main .nav--links img {
@@ -218,9 +349,106 @@ img {
     margin-left: 10px
 }
 
+@media screen and (min-width:500px) and (max-width:767px) {
+    .nav--main .nav--links img {
+        display: none
+    }
+}
+
+@media screen and (max-width:499px) {
+    .nav--main .nav--links img {
+        display: none
+    }
+}
+
+.nav--main .nav--hamburger {
+    position: absolute;
+    top: 18px;
+    right: 46px;
+    z-index: 20
+}
+
+@media screen and (min-width:1170px) {
+    .nav--main .nav--hamburger {
+        display: none
+    }
+}
+
+@media screen and (min-width:960px) and (max-width:1169px) {
+    .nav--main .nav--hamburger {
+        display: none
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:959px) {
+    .nav--main .nav--hamburger {
+        display: none
+    }
+}
+
+.nav--main .nav--hamburger span,
+.nav--main .nav--hamburger span:before,
+.nav--main .nav--hamburger span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 35px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out
+}
+
+.nav--main .nav--hamburger span:before {
+    top: -10px
+}
+
+.nav--main .nav--hamburger span:after {
+    bottom: -10px
+}
+
+.nav--main .nav--hamburger.active span {
+    background-color: transparent
+}
+
+.nav--main .nav--hamburger.active span:before,
+.nav--main .nav--hamburger.active span:after {
+    top: 0
+}
+
+.nav--main .nav--hamburger.active span:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.nav--main .nav--hamburger.active span:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+@media screen and (min-width:500px) and (max-width:767px) {
+    .nav--links.active {
+        display: block
+    }
+}
+
+@media screen and (max-width:499px) {
+    .nav--links.active {
+        display: block
+    }
+}
+
 footer.nav--footer {
     background: white;
     padding: 40px
+}
+
+@media screen and (max-width:499px) {
+    footer.nav--footer {
+        padding: 0
+    }
 }
 
 footer.nav--footer h3 {
@@ -271,21 +499,23 @@ footer.nav--footer ul:last-of-type {
 
 @media screen and (min-width:500px) and (max-width:767px) {
     footer.nav--footer ul:last-of-type {
-        padding-left: 0
+        padding-left: 0;
+        border-right: none;
+        border-left: none
     }
 }
 
 @media screen and (max-width:499px) {
     footer.nav--footer ul:last-of-type {
-        padding-left: 0
+        padding-left: 0;
+        border-right: none;
+        border-left: none
     }
 }
 
 @media screen and (min-width:500px) and (max-width:767px) {
     footer.nav--footer ul {
         width: 100%;
-        border-right: none;
-        border-left: none;
         border-bottom: 1px solid grey;
         padding: 20px 0
     }
@@ -294,8 +524,6 @@ footer.nav--footer ul:last-of-type {
 @media screen and (max-width:499px) {
     footer.nav--footer ul {
         width: 100%;
-        border-right: none;
-        border-left: none;
         border-bottom: 1px solid grey;
         padding: 20px 0
     }
@@ -322,4 +550,41 @@ footer.nav--footer ul input[type=submit] {
 
 footer.nav--footer ul form {
     display: inline-block
+}
+
+footer.nav--sponsor {
+    background: #eaefec;
+    padding: 20px 0
+}
+
+footer.nav--sponsor p,
+footer.nav--sponsor img {
+    display: inline-block
+}
+
+@media screen and (max-width:499px) {
+    footer.nav--sponsor p,
+    footer.nav--sponsor img {
+        width: 100%
+    }
+}
+
+footer.nav--sponsor img {
+    width: 30%
+}
+
+@media screen and (max-width:499px) {
+    footer.nav--sponsor img {
+        max-width: 250px
+    }
+}
+
+footer.nav--sponsor p {
+    margin-right: 10%
+}
+
+@media screen and (max-width:499px) {
+    footer.nav--sponsor p {
+        margin-right: 0
+    }
 }

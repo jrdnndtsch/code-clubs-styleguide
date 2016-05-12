@@ -1,3 +1,13 @@
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
 @media screen and (min-width:1170px) {
     .wrapper {
         width: 1146px
@@ -105,6 +115,14 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex
+}
+
+.wrapper--secondary {
+    background: white;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px
 }
 
 .container--style-guide ul {

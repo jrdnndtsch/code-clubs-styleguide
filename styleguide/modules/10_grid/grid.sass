@@ -1,3 +1,8 @@
+html
+	:box-sizing border-box
+*, *:before, *:after
+	:box-sizing inherit
+
 //grid columns
 $grid-base: 40
 
@@ -68,6 +73,7 @@ $grid-base: 40
 	+display-for(xl lg md sm)
 		:margin 0 auto
 	+display-for(xs)
+		// :width 96%
 		:margin 0
 		:padding 0 12px
 	&--flex
@@ -81,6 +87,13 @@ $grid-base: 40
 	:display none
 .wrapper--flex.tab-content.current
 	:display flex
+
+.wrapper--secondary
+	:background white
+	:border-radius 5px
+	:padding 25px
+	:margin-top 30px
+	:margin-bottom 30px
 
 
 .container--style-guide

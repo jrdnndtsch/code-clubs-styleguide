@@ -3,7 +3,7 @@ $black: #333
 @import '../10_grid/grid.sass'
 
 .nav--main
-  :background $black
+  :background #1a1a1a
   :padding 12px 0
   :color white
   :line-height 30px
@@ -14,6 +14,11 @@ $black: #333
     :padding 0 10px
   .logo
     :font-size 20px
+    +display-for(sm xs)
+      :z-index 20
+      :display block
+    a
+      :text-transform lowercase
     span
       :font-size 20px
       :vertical-align middle
@@ -22,26 +27,82 @@ $black: #333
       :width 30px
       :margin-right 6px
   .nav--links
-    :float right
     :font-size 12px
-    :font-weight light
-    // :color rgba(255,255,255,0.5)
+    :font-weight 100
+    +display-for(xl lg md)
+      :float right
+    +display-for(sm xs)
+      :width 100%
+      :position absolute
+      :left 0
+      :z-index 10
+      :background #1a1a1a
+      :display none
+      :height 100vh
+      :padding-top 20vh
+
     a
       :color rgba(255,255,255,0.5)
       :line-height 33px
-      :border-right 1px solid rgba(255,255,255,0.2)
-      &:last-of-type
-        :border none
+      :transition all 200ms ease-in-out
+      +display-for(xl lg md)
+        :border-right 1px solid rgba(255,255,255,0.2)
+        &:last-of-type
+          :border none
+      +display-for(sm xs)
+        :display block
+        :width 100%
+        :padding 20px 10px
+        :font-size 32px
+        :color white
+        :text-align center
+        &:hover
+          :color rgba(255,255,255,0.6)
+
     img
       :width 32px
       :height 32px
       :border-radius 50%
       :margin-left 10px
-
+      +display-for(sm xs)
+        :display none
+  .nav--hamburger
+    :position absolute
+    :top 18px
+    :right 46px
+    :z-index 20
+    +display-for(xl lg md)
+      :display none
+  .nav--hamburger span, .nav--hamburger span:before, .nav--hamburger span:after
+    :cursor pointer
+    :border-radius 1px
+    :height 3px
+    :width 35px
+    :background white
+    :position absolute
+    :display block
+    :content ''
+    :transition all 500ms ease-in-out
+  .nav--hamburger span:before
+    :top -10px
+  .nav--hamburger span:after
+    :bottom -10px
+  .nav--hamburger.active span
+    :background-color transparent
+  .nav--hamburger.active span:before, .nav--hamburger.active span:after
+    :top 0
+  .nav--hamburger.active span:before
+    :transform rotate(45deg)
+  .nav--hamburger.active span:after
+    :transform rotate(-45deg)
+.nav--links.active
+  +display-for(sm xs)
+    :display block
 footer.nav--footer
   :background white
   :padding 40px
-
+  +display-for(xs)
+    :padding 0
   h3
     :margin-top 0
   .email-form
@@ -66,10 +127,10 @@ footer.nav--footer
       :padding-left 28px
       +display-for(sm xs)
         :padding-left 0
+        :border-right none
+        :border-left none
     +display-for(sm xs)
       :width 100%
-      :border-right none
-      :border-left none
       :border-bottom 1px solid grey
       :padding 20px 0
     a, input[type=submit]
@@ -85,3 +146,20 @@ footer.nav--footer
       :margin 0
     form
       :display inline-block
+footer.nav--sponsor
+  :background #eaefec
+  :padding 20px 0
+  p, 
+  img 
+    :display inline-block
+    +display-for(xs)
+      :width 100%
+  img 
+    :width 30%
+    +display-for(xs)
+      :max-width 250px    
+  p
+    :margin-right 10%  
+    +display-for(xs)
+      :margin-right 0
+

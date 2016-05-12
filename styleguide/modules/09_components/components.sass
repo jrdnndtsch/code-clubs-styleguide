@@ -145,27 +145,42 @@ $purple: rgba(93, 88, 129, 1)
 		.list--tags
 			li
 				:background $green-dark
-
+.lesson--single-title-bar,
+.lesson--single-text,
+.lesson--single-title-img,
+.sidebar
+	+display-for(sm xs)
+		:width 100% !important
 .lesson--single-title-bar
 	:width 70%
 	:border-top-left-radius 5px
 	:padding 25px
 	:color white
+	+display-for(sm xs)
+		:border-top-right-radius 5px
 .lesson--single-text
 	:background white
 	:width 70%
 	:border-bottom-left-radius 5px
 	:padding 25px
+	+display-for(sm xs)
+		:border-bottom-left-radius 0px
 .lesson--single-title-img
 	:width 30%
 	:border-top-right-radius 5px
 	:background-size cover
 	:background-position center
 	:background-repeat no-repeat
+	:background-color grey
+	+display-for(sm xs)
+		:border-top-right-radius 0px
+		:height 200px
 .sidebar
 	:width 30%
 	:background #dee6e1
 	:border-bottom-right-radius 5px
+	+display-for(sm xs)
+		:border-bottom-left-radius 5px
 	&--text
 		:padding 25px
 
@@ -180,4 +195,4 @@ $purple: rgba(93, 88, 129, 1)
 	:padding 25px
 
 .box--large
-	:width 80%	
+	:width 80%

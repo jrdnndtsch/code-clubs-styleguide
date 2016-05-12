@@ -1,3 +1,13 @@
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
 @media screen and (min-width:1170px) {
     .wrapper {
         width: 1146px
@@ -107,6 +117,14 @@
     display: flex
 }
 
+.wrapper--secondary {
+    background: white;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
 .container--style-guide ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -154,6 +172,14 @@ img {
     margin-right: 0
 }
 
+@media screen and (min-width:768px) and (max-width:959px) {
+    .as--home-form .select {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px
+    }
+}
+
 @media screen and (min-width:500px) and (max-width:767px) {
     .as--home-form .select {
         width: 100%;
@@ -186,11 +212,11 @@ img {
     margin-bottom: 70px
 }
 
-.as--home-intro {
+.wrapper.as--home-intro {
     padding: 50px 0 70px 0
 }
 
-.as--home-intro p {
+.wrapper.as--home-intro p {
     max-width: 700px;
     margin: 0 auto
 }
@@ -215,6 +241,17 @@ img {
 
 .as--no-top-margin {
     margin-top: 0
+}
+
+.wrapper.as--lesson-wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+@media screen and (max-width:499px) {
+    .wrapper.as--lesson-wrapper {
+        width: 100%!important
+    }
 }
 
 label[for=user_remember_me] {

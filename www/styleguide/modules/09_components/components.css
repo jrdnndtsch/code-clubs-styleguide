@@ -1,3 +1,13 @@
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
 @media screen and (min-width:1170px) {
     .wrapper {
         width: 1146px
@@ -105,6 +115,14 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex
+}
+
+.wrapper--secondary {
+    background: white;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px
 }
 
 .container--style-guide ul {
@@ -348,11 +366,41 @@ img {
     background: #007556
 }
 
+@media screen and (min-width:500px) and (max-width:767px) {
+    .lesson--single-title-bar,
+    .lesson--single-text,
+    .lesson--single-title-img,
+    .sidebar {
+        width: 100%!important
+    }
+}
+
+@media screen and (max-width:499px) {
+    .lesson--single-title-bar,
+    .lesson--single-text,
+    .lesson--single-title-img,
+    .sidebar {
+        width: 100%!important
+    }
+}
+
 .lesson--single-title-bar {
     width: 70%;
     border-top-left-radius: 5px;
     padding: 25px;
     color: white
+}
+
+@media screen and (min-width:500px) and (max-width:767px) {
+    .lesson--single-title-bar {
+        border-top-right-radius: 5px
+    }
+}
+
+@media screen and (max-width:499px) {
+    .lesson--single-title-bar {
+        border-top-right-radius: 5px
+    }
 }
 
 .lesson--single-text {
@@ -362,18 +410,57 @@ img {
     padding: 25px
 }
 
+@media screen and (min-width:500px) and (max-width:767px) {
+    .lesson--single-text {
+        border-bottom-left-radius: 0
+    }
+}
+
+@media screen and (max-width:499px) {
+    .lesson--single-text {
+        border-bottom-left-radius: 0
+    }
+}
+
 .lesson--single-title-img {
     width: 30%;
     border-top-right-radius: 5px;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    background-color: grey
+}
+
+@media screen and (min-width:500px) and (max-width:767px) {
+    .lesson--single-title-img {
+        border-top-right-radius: 0;
+        height: 200px
+    }
+}
+
+@media screen and (max-width:499px) {
+    .lesson--single-title-img {
+        border-top-right-radius: 0;
+        height: 200px
+    }
 }
 
 .sidebar {
     width: 30%;
     background: #dee6e1;
     border-bottom-right-radius: 5px
+}
+
+@media screen and (min-width:500px) and (max-width:767px) {
+    .sidebar {
+        border-bottom-left-radius: 5px
+    }
+}
+
+@media screen and (max-width:499px) {
+    .sidebar {
+        border-bottom-left-radius: 5px
+    }
 }
 
 .sidebar--text {

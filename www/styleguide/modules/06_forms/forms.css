@@ -1,3 +1,156 @@
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+@media screen and (min-width:1170px) {
+    .wrapper {
+        width: 1146px
+    }
+    .wrapper:margin {
+        left: 12px;
+        right: 12px
+    }
+}
+
+@media screen and (min-width:960px) and (max-width:1169px) {
+    .wrapper {
+        width: 936px
+    }
+    .wrapper:margin {
+        left: 12px;
+        right: 12px
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:959px) {
+    .wrapper {
+        width: 744px
+    }
+    .wrapper:margin {
+        left: 12px;
+        right: 12px
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:767px) {
+    .wrapper {
+        width: 480px
+    }
+    .wrapper:margin {
+        left: 12px;
+        right: 12px
+    }
+}
+
+@media screen and (max-width:499px) {
+    .wrapper {
+        width: auto;
+        margin-left: 8px;
+        margin-right: 8px
+    }
+}
+
+.wrapper {
+    box-sizing: border-box;
+    position: relative
+}
+
+@media screen and (min-width:1170px) {
+    .wrapper {
+        margin: 0 auto
+    }
+}
+
+@media screen and (min-width:960px) and (max-width:1169px) {
+    .wrapper {
+        margin: 0 auto
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:959px) {
+    .wrapper {
+        margin: 0 auto
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:767px) {
+    .wrapper {
+        margin: 0 auto
+    }
+}
+
+@media screen and (max-width:499px) {
+    .wrapper {
+        margin: 0;
+        padding: 0 12px
+    }
+}
+
+.wrapper--flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap
+}
+
+.wrapper--flex.tab-content {
+    display: none
+}
+
+.wrapper--flex.tab-content.current {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.wrapper--secondary {
+    background: white;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+.container--style-guide ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.container--style-guide li {
+    height: 100px;
+    background: lightgrey;
+    box-sizing: border-box;
+    width: 22.5%
+}
+
+.container--style-guide li:nth-of-type(2n+1) {
+    background: rgba(0, 0, 0, 0.1)
+}
+
+img {
+    max-width: 100%
+}
+
 select {
     padding: 10px 20px;
     -webkit-appearance: none;
@@ -68,6 +221,18 @@ input[type=checkbox] {
 .wrapper.form--new-lesson .sidebar {
     padding: 25px;
     border-top-right-radius: 5px
+}
+
+@media screen and (min-width:500px) and (max-width:767px) {
+    .wrapper.form--new-lesson .sidebar {
+        border-top-right-radius: 0
+    }
+}
+
+@media screen and (max-width:499px) {
+    .wrapper.form--new-lesson .sidebar {
+        border-top-right-radius: 0
+    }
 }
 
 .wrapper.form--new-lesson .sidebar .levels input {

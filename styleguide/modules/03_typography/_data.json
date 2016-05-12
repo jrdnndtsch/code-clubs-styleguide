@@ -30,15 +30,15 @@
         "paragraphs": [
             {
                 "className": "p1",
-                "text": "SEO is a marketing tactic that costs five percent of overall budget but brings in more than 20 percent of revenue for many Fortune 500 companies, and yet very few of them prioritize it. Instead, while slowly changing, too many CMOS still favor paid search, which costs 20 percent and brings in… 20 percent. In search, businesses need to shift priorities. Now."
+                "text": "This is a regular sized paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quisquam illum voluptas totam, culpa eligendi aut cum nihil odio hic, magni quaerat! Tempora officiis assumenda mollitia alias corrupti, ipsam facilis."
             },
             {
                 "className": "p2",
-                "text": "Link volume is one of the most powerful signals search engines use to rank websites. There’s a way to use links to generate better search results, but too many marketers rely on traditional (or even black hat) tactics that just don’t work anymore."
+                "text": "this is a regular sized paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate numquam eius error harum soluta ut recusandae doloremque reprehenderit, est esse."
             },
             {
                 "className": "p3 small",
-                "text": "Huge to be recognized at the 2014 “Made in NY” Awards for the company’s contribution to New York’s creative economy."
+                "text": "This is a small paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ullam repellat aliquam explicabo voluptatum, omnis, sed, provident error minima at dolores. Beatae id fugit numquam eum explicabo sunt facilis blanditiis provident quae laboriosam distinctio suscipit magni harum at dolores, assumenda voluptatum tempore! Dolores, laboriosam animi. Cupiditate cum laudantium libero laborum!"
             }
         ]
     }

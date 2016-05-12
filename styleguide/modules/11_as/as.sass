@@ -17,7 +17,7 @@ $green : #00a076
     :margin-bottom 70px
     &:nth-of-type(3n + 3)
       :margin-right 0
-    +display-for(sm xs)
+    +display-for(md sm xs)
       :width 100%
       :margin-right 0
       :margin-bottom 30px
@@ -34,7 +34,7 @@ $green : #00a076
     :display block
     :width 100%
     :margin-bottom 70px
-.as--home-intro
+.wrapper.as--home-intro
   :padding 50px 0 70px 0
   p
     :max-width 700px
@@ -56,6 +56,11 @@ $green : #00a076
   :padding-bottom 10px
 .as--no-top-margin
   :margin-top 0
+.wrapper.as--lesson-wrapper
+  :margin-top 30px
+  :margin-bottom 30px
+  +display-for(xs)
+    :width 100% !important
 
 label[for=user_remember_me]
-  :margin-left 25px 
+  :margin-left 25px
