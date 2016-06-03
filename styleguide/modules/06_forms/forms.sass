@@ -1,11 +1,14 @@
 @import '../10_grid/grid.sass'
 select
-	:padding 10px 20px
+	:padding 6px 12px
+	:padding 6px 30px 6px 12px
 	:appearance none
 	:border none
 	:font-size 14px
-	:background lightgrey
+	:background #E2E2E2
 	:border-radius 5px
+	&:hover
+		:cursor pointer
 
 input
 	:width 100%
@@ -57,3 +60,11 @@ input[type=checkbox]
 				:width 10%
 				:text-align left
 				:margin-bottom 10px
+
+
+// SIGN IN PAGE
+.user_email,
+.user_password,
+.user_remember_me 
+	:max-width 350px
+	:margin 0 auto

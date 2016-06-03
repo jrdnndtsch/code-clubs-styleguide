@@ -1,6 +1,10 @@
 @import '../10_grid/grid.sass'
+@import '../02_colors/colors.sass'
+
 body
 	:font-family 'Montserrat' !important
+*:focus 
+	:outline -webkit-focus-ring-color $yellow 5px
 
 h1
 	:font-size 80px
@@ -9,8 +13,10 @@ h1
 	+display-for(xs)
 		:font-size 40px
 h2
-	:font-size 48px
+	:font-size 36px
 	:line-height 1.2
+	:font-weight bold
+	:text-transform uppercase
 	+display-for(xs)
 		:font-size 32px
 h3
@@ -19,9 +25,11 @@ h3
 	:font-weight 400
 
 p
+	:font-family 'Quicksand' !important
 	:font-size 16px
 	:line-height 1.6
-	:color gray
+	:color $dark-grey
+	
 
 p.small
 	:font-size 13px
@@ -44,9 +52,11 @@ a
 	&:hover
 		:background transparent
 		:text-decoration none !important
-		:color lighten(#333, 10%)
-
-
+		:color $yellow
+	&:active
+		:text-decoration none !important
+	&:focus
+		:text-decoration none !important
 
 #typography
   h1, h2, h3, h4, h5, h6, p

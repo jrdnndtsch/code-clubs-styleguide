@@ -1,5 +1,4 @@
 @import '../02_colors/colors.sass'
-$black : #333
 
 .button
 	:cursor pointer
@@ -17,7 +16,7 @@ $black : #333
 	:margin-bottom 16px
 
 .button--primary
-	:font-size 10px
+	:font-size 12px
 	:text-transform uppercase
 	:color $black
 	:border 2px solid $black
@@ -25,22 +24,50 @@ $black : #333
 	:padding 5px 14px
 	:line-height 15px
 	:background white
+	:margin-bottom 0px
+	:font-weight normal
+	&:hover
+		:background black
+		:text-decoration none !important
+		:color $yellow
+		:border 2px solid black
 
 .button--secondary
-	:border 2px solid $black
-	:border-radius 5px
-	:text-transform uppercase
-	:padding 10px 12px
-	:font-size 20px
+    :color white
+    :border-radius 5px
+    :text-transform uppercase
+    :padding 10px 12px
+    :letter-spacing 2px
+    :font-family montserrat
+    :font-size 26px
+    :width 30%
+    :font-weight 300
+    :margin 0px auto
+    :border 2px solid white
+    :background rgba(0,0,0,0.8)
+    &:hover
+    	:background black
+    	:text-decoration none !important
+    	:color $yellow
+    	:border 2px solid $yellow
 
 .button--tertiary
-	:background $green
-	:color white
+	:background $yellow
+	:color black
 	:text-transform uppercase
-	:padding 6px
+	:padding 6px 10px
 	:border none
 	:border-radius 5px
-	:border 1px solid $green
+	:border 1px solid $yellow
+	:margin-top 30px
+	:font-weight normal
+	:font-family montserrat
+	&:hover
+		:background black
+		:text-decoration none !important
+		:color $yellow
+		:border 1px solid black
+
 .button--large
 	:padding 10px 12px
 	:font-size 20px

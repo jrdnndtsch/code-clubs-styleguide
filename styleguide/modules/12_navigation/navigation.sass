@@ -1,9 +1,9 @@
-$black: #333
+
 @import '../02_colors/colors.sass'
 @import '../10_grid/grid.sass'
 
 .nav--main
-  :background #1a1a1a
+  :background $black
   :padding 12px 0
   :color white
   :line-height 30px
@@ -11,7 +11,7 @@ $black: #333
     :color white
     :text-transform uppercase
     :display inline-block
-    :padding 0 10px
+    :padding 0 10px 0 8px
   .logo
     :font-size 20px
     +display-for(sm xs)
@@ -24,8 +24,10 @@ $black: #333
       :vertical-align middle
       :display inline-block
     img
-      :width 30px
+      :width 250px
       :margin-right 6px
+      +display-for(xs)
+        :width 200px
   .nav--links
     :font-size 12px
     :font-weight 100
@@ -42,9 +44,13 @@ $black: #333
       :padding-top 20vh
 
     a
-      :color rgba(255,255,255,0.5)
+      :color $light-grey
       :line-height 33px
       :transition all 200ms ease-in-out
+      &:hover
+        :background transparent
+        :text-decoration none !important
+        :color $yellow
       +display-for(xl lg md)
         :border-right 1px solid rgba(255,255,255,0.2)
         &:last-of-type
@@ -58,7 +64,6 @@ $black: #333
         :text-align center
         &:hover
           :color rgba(255,255,255,0.6)
-
     img
       :width 32px
       :height 32px
@@ -68,7 +73,7 @@ $black: #333
         :display none
   .nav--hamburger
     :position absolute
-    :top 18px
+    :top 13px
     :right 46px
     :z-index 20
     +display-for(xl lg md)
@@ -99,46 +104,65 @@ $black: #333
   +display-for(sm xs)
     :display block
 footer.nav--footer
-  :background white
+  :background $medium-grey
+  :color white
   :padding 40px
+  .wrapper--flex
+    :max-width 100%
+    +display-for(xs)
+      :max-width 80%
+      :margin 0 auto
+      :padding-top 20px
   +display-for(xs)
     :padding 0
   h3
     :margin-top 0
+    :letter-spacing 0.75px
   .email-form
     :width 40%
     :padding-left 28px
+    +display-for(lg)
+      :width 35%
+    p
+      :color $light-grey
     +display-for(sm xs)
       :padding-left 0
       :padding 20px 0
       :width 100%
     input
-      :width 80%
+      :width 100%
     input[type=email]
       :border 1px solid #333
       :padding 6px
       :border-radius 5px
       :margin-bottom 10px
+    input[type=submit]
+      :width 200px
   ul
     :width 30%
+    &:first-of-type
+      +display-for(md)
+        :width 35%
     &:last-of-type
-      :border-left 1px solid grey
-      :border-right 1px solid grey
+      :border-left 1px solid $light-grey
+      :border-right 1px solid $light-grey
       :padding-left 28px
+      +display-for(md)
+        :width 25%
       +display-for(sm xs)
         :padding-left 0
         :border-right none
         :border-left none
     +display-for(sm xs)
       :width 100%
-      :border-bottom 1px solid grey
+      :border-bottom 1px solid $light-grey
       :padding 20px 0
     a, input[type=submit]
-      :color $green
+      :color $yellow
       :font-size 12px
       :text-transform uppercase
       &:hover
-        :color #4d4d4d
+        :color #000
     input[type=submit]
       :border none
       :background transparent
@@ -147,19 +171,65 @@ footer.nav--footer
     form
       :display inline-block
 footer.nav--sponsor
-  :background #eaefec
   :padding 20px 0
+  :background $black
+  .wrapper 
+    :display flex
+    :justify-content space-between
+    :align-items center
+    +display-for(sm xs)
+      :flex-direction column-reverse
+      :justify-content center
+      :align-items center
+      :text-align center
+    div:last-child
+      :display flex
+      :flex-direction column
+      :justify-content space-between
+      :align-items center
+      :margin-bottom 8px
+      +display-for(sm xs)
+        :margin-bottom 20px
+      p 
+        :font-size 10px
+        :text-transform uppercase
+        :letter-spacing 0.75px
+        :margin-bottom 8px
+        :color rgba(255,255,255,0.5)
+        +display-for(md sm xs)
+          :padding 0 
+    .as--creds
+      +display-for(sm xs)
+        :margin-top 23px
+      p
+        :color rgba(255,255,255,0.5) 
+        :font-size 10px
+        :text-transform uppercase
+        :letter-spacing 0.25px
+      a
+        :color rgba(255,255,255,0.5)
+        :border-bottom 1px solid $yellow
+        &:hover
+          :color #fff
   p, 
   img 
     :display inline-block
     +display-for(xs)
       :width 100%
   img 
-    :width 30%
+    :width 250px
+    :max-height 38px
     +display-for(xs)
-      :max-width 250px    
+      :max-width 250px
+  img:last-child
+    :width 214px    
   p
-    :margin-right 10%  
+    //:margin-right 10% 
+    :color #fff
+    :font-family Quicksand
+    :font-weight 100
+    :margin-bottom  0
+    :padding 0 20px 0 20px
     +display-for(xs)
       :margin-right 0
 
