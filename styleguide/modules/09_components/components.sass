@@ -208,9 +208,11 @@ $dark-blue : #1a3967
 	:background white
 	:border-radius 5px
 	:width 60%
-	:min-width 600px
+	:max-width 600px
 	:margin 100px auto
 	:padding 25px
+	+display-for(sm xs)
+		:width 90%
 
 .box--large
 	:width 80%
