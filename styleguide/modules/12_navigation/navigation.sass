@@ -64,7 +64,7 @@
     :padding 0 10px 0 8px
   .logo
     :font-size 20px
-    +display-for(sm xs)
+    +display-for(md sm xs)
       :z-index 20
       :display block
     a
@@ -81,9 +81,9 @@
   .nav--links
     :font-size 12px
     :font-weight 100
-    +display-for(xl lg md)
+    +display-for(xl lg)
       :float right
-    +display-for(sm xs)
+    +display-for(md sm xs)
       :width 100%
       :position absolute
       :left 0
@@ -101,11 +101,11 @@
         :background transparent
         :text-decoration none !important
         :color $yellow
-      +display-for(xl lg md)
+      +display-for(xl lg)
         :border-right 1px solid rgba(255,255,255,0.2)
         &:last-of-type
           :border none
-      +display-for(sm xs)
+      +display-for(md sm xs)
         :display block
         :width 100%
         :padding 20px 10px
@@ -119,10 +119,10 @@
       :height 32px
       :border-radius 50%
       :margin-left 10px
-      +display-for(sm xs)
+      +display-for(md sm xs)
         :display none
 .nav--links.active
-  +display-for(sm xs)
+  +display-for(md sm xs)
     :display block
 footer.nav--footer
   :background $medium-grey
@@ -146,7 +146,7 @@ footer.nav--footer
       :width 35%
     p
       :color $light-grey
-    +display-for(sm xs)
+    +display-for(md sm xs)
       :padding-left 0
       :padding 20px 0
       :width 100%
