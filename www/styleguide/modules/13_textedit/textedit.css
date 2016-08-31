@@ -1,1 +1,23 @@
-.text-edit h1{font-size:20px}.text-edit h2{font-size:18px}.text-edit h3{font-size:16px}.text-edit ul{list-style:disc;margin-left:10px;padding-left:20px}.text-edit ol{list-style:decimal;margin-left:10px;padding-left:20px}
+.text-edit h1 {
+    font-size: 20px
+}
+
+.text-edit h2 {
+    font-size: 18px
+}
+
+.text-edit h3 {
+    font-size: 16px
+}
+
+.text-edit ul {
+    list-style: disc;
+    margin-left: 10px;
+    padding-left: 20px
+}
+
+.text-edit ol {
+    list-style: decimal;
+    margin-left: 10px;
+    padding-left: 20px
+}

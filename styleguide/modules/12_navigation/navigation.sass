@@ -4,8 +4,9 @@
 .nav--hamburger
   :display none
   :position absolute
-  :top 0
+  :top 50%
   :right 0
+  :transform translateY(-50%)
   :cursor pointer
   +display-for(md sm xs)
     :float right 
@@ -34,6 +35,8 @@
       :background white
       :transition all 0.3s
 .nav--hamburger.active
+  :top 0
+  :transform translateY(0)
   +display-for(md sm xs)
     :padding 11px 0 17px
     span 
