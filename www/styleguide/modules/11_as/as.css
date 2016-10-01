@@ -201,6 +201,10 @@ img {
     min-height: 70vh
 }
 
+.as--header-link {
+    color: #FFCE06
+}
+
 .as--home-form select {
     width: 100%;
     background: #FFCE06;
@@ -217,7 +221,7 @@ img {
 
 .as--home-form .select {
     position: relative;
-    width: 30%;
+    width: 45%;
     margin-right: 5%;
     margin-bottom: 70px
 }
@@ -479,6 +483,14 @@ img {
 
 .as--about-buttons {
     min-width: 158px
+}
+
+.as--request-button {
+    margin: 0
+}
+
+.nav--main .nav--links a.as--request-button {
+    color: black
 }
 
 .as--about-training {

@@ -185,7 +185,8 @@ input {
     padding: 6px 4px;
     border: 1px solid #333;
     border-radius: 5px;
-    margin-bottom: 16px
+    margin-bottom: 16px;
+    color: black
 }
 
 input[type=checkbox] {
