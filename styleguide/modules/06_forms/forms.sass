@@ -10,12 +10,11 @@ select
 	&:hover
 		:cursor pointer
 
-input
+input, textarea
 	:width 100%
-	:padding 6px 4px
-	:border 1px solid #333
-	:border-radius 5px
-	:margin-bottom 16px
+	:padding 12px 6px
+	:border 1px solid $light-grey
+	// :margin-bottom 16px
 	:color black
 input[type=checkbox]
 	:width auto
@@ -61,6 +60,29 @@ input[type=checkbox]
 				:width 10%
 				:text-align left
 				:margin-bottom 10px
+
+// FORM COMPONENTS
+.add-new-container
+	:background $bg-grey
+	:padding 20px 12px
+	h3 
+		:border-bottom 2px solid $medium-grey
+		:margin-top 0
+		:text-transform uppercase
+	label
+		:font-size 18px
+		:font-weight 100
+	input[type='submit']
+		:background $yellow	
+		:padding 12px 16px
+	.wrapper--flex
+		:align-items flex-end
+		>div 
+			:padding 12px
+			&:first-of-type
+				:padding-left 0
+			&:last-of-type
+				:padding-right 0			
 
 
 // SIGN IN PAGE
