@@ -25,8 +25,7 @@
       :background white
       :display block
       :margin-top 6px
-      :transition all 0.3s
-        
+      :transition all 0.3s 
     span
       :width 32px
       :height 2px
@@ -54,16 +53,18 @@
       :height 2px
 .nav--main
   :background $black
-  :padding 12px 0
-  :color white
   :line-height 30px
   a
-    :color white
     :text-transform uppercase
     :display inline-block
-    :padding 0 10px 0 8px
+    :text-align center
+    :width 100%
+  .logo-container 
+    :flex 0 0 340px  
   .logo
     :font-size 20px
+    :padding 12px 0
+    :display block
     +display-for(md sm xs)
       :z-index 20
       :display block
@@ -79,10 +80,12 @@
       +display-for(xs)
         :width 200px
   .nav--links
+    :list-style none
+    :margin-bottom 0
     :font-size 12px
     :font-weight 100
+    :flex 1 0 auto
     +display-for(xl lg)
-      :float right
     +display-for(md sm xs)
       :width 100%
       :position absolute
@@ -92,7 +95,10 @@
       :display none
       :height 100vh
       :padding-top 20vh
-
+    li 
+      :flex 1 0 auto
+      :position relative
+      :padding 12px 0
     a
       :color $light-grey
       :line-height 33px
@@ -101,10 +107,6 @@
         :background transparent
         :text-decoration none !important
         :color $yellow
-      +display-for(xl lg)
-        :border-right 1px solid rgba(255,255,255,0.2)
-        &:last-of-type
-          :border none
       +display-for(md sm xs)
         :display block
         :width 100%
@@ -121,6 +123,35 @@
       :margin-left 10px
       +display-for(md sm xs)
         :display none
+    .nav--link-with-sub
+      span 
+        :display inline-block
+        :vertical-align middle
+        img 
+          :display block
+    .nav--link-arrow
+      :font-size 8px
+    .nav--links-sub
+      :border-top 1px solid $yellow
+      :border-bottom 1px solid $blue
+      :background white
+      :position absolute
+      :width 100%
+      :top calc(100% - 4px)
+      :z-index 10
+      li 
+        :padding 0 6px
+      a 
+        :line-height 20px
+        :padding 6px 0
+        :display block
+        :color $black 
+        :border-bottom 1px solid $light-grey
+        :text-align left
+        :text-transform capitalize  
+      li:last-of-type
+        a 
+          :border-bottom none   
 .nav--links.active
   +display-for(md sm xs)
     :display block

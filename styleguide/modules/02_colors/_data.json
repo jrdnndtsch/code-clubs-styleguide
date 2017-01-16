@@ -5,7 +5,10 @@
         "intro": ["The main color for Kids Learning Code Green. Complimentary colors can be found on materials throughout the site"],
         "colors": [
             {
-                "className": "green"
+                "className": "grey"
+            },
+            {
+                "className" : "yellow"
             }
         ]
     }

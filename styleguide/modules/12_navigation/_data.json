@@ -3,6 +3,6 @@
     "name": "Navigation",
     "hasScript": "yes",
     "items": {
-        "disabled" : "Disabled"
+        "navlinks" : ["About", "Lessons", "Workshops", "Francais"]
     }
 }
