@@ -1,5 +1,12 @@
 $yellow : #FFCE06
 
+=make-term-list
+	:display flex
+	:border-bottom 1px solid $light-grey
+	:padding 16px 10px
+	&:last-of-type
+		:border-bottom none
+
 ol, ul
 	:margin 0 0 12px 0
 	:padding 0
@@ -47,11 +54,10 @@ ul.list--tags
 		:margin-bottom 4px
 		&:last-of-type
 			:margin-right 0
+			
 .list--admin 
 	li 
-		:display flex
-		:border-bottom 1px solid $light-grey
-		:padding 16px 10px
+		+make-term-list
 		.term 
 			:flex 0 0 160px
 			:font-weight bold
@@ -62,6 +68,29 @@ ul.list--tags
 			:text-align right	
 	form 
 		:width 100%
+.list--glossary
+	li 
+		+make-term-list
+		div:first-of-type
+			:flex 0 0 200px
+			:font-weight bold	
+.list--header
+	:color $dark-grey
+	:text-transform uppercase
+	:font-size 13px
+	label
+		:cursor pointer
+	.wrapper 
+		:border-bottom 3px solid $light-grey
+		:display flex
+		:padding 0 10px
+	&-glossary 
+		div:first-of-type
+			:flex 0 0 200px
+			:font-weight bold
+			
+
+
 
 
 
