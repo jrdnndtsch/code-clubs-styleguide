@@ -6,12 +6,14 @@ select
 	:appearance none
 	:border none
 	:font-size 14px
-	:background #E2E2E2
-	:border-radius 5px
+	:background white
+	:border-radius 0px
 	&:hover
 		:cursor pointer
+label 
 
-input, textarea
+
+input, textarea, select
 	:width 100%
 	:padding 12px 6px
 	:border 1px solid $light-grey
@@ -83,7 +85,25 @@ input[type=checkbox]
 			&:first-of-type
 				:padding-left 0
 			&:last-of-type
-				:padding-right 0			
+				:padding-right 0	
+
+//PROFILE
+.form--profile			
+	label
+		:text-transform uppercase
+		:color #4C4C4C
+		:margin-bottom 12px
+	input, select, textarea
+		:margin-bottom 24px
+	label.required
+		&:after
+			:content '*'
+			:color $red
+			:margin-left 2px
+	.internal
+		:color $medium-grey					
+		:font-size 12px
+		:margin-left 6px
 
 
 // SIGN IN PAGE
