@@ -79,11 +79,18 @@ $grid-base: 40
 		:padding 0 12px
 	&--flex
 		:display flex
-		:align-items stretch
-		// :flex-wrap wrap
+		&-wrap
+			:align-items stretch
+			:flex-wrap wrap
 		// :flex 1 0 50%
 		// :justify-content space-between
-		:flex-flow row wrap
+		// :flex-flow row wrap
+.flex-even
+	div
+		:width calc(50% - 6px)
+	div:nth-of-type(2n + 1)
+		:margin-right 12px
+
 .wrapper--flex.tab-content
 	:display none
 .wrapper--flex.tab-content.current

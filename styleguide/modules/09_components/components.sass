@@ -203,6 +203,14 @@ $dark-blue : #1a3967
 		:padding 25px
 
 
+// GENERINC ELEMENTS
+
+.required 
+	&:after
+		:content '*'
+		:color $red
+		:margin-left 2px
+
 // BOX
 .box
 	:background white
@@ -218,7 +226,7 @@ $dark-blue : #1a3967
 	:width 80%
 
 
-//Admin
+// TABS
 ul.tabs
 	li 
 		:flex 1 0 auto
@@ -233,10 +241,36 @@ ul.tabs
 			:margin-right 0
 		&.current
 			:background $blue
-			:color white	
+			:color white
 
 
-// RESOURCES
+// TITLES
+.title--tertiary
+	:text-transform uppercase
+	:color $blue
+	:font-family $font-llc
+	:font-size 16px
+	:border-bottom 1px solid $blue
+	:margin 0
+	:padding 12px 6px
+	:margin-bottom 20px				
+
+
+// HEADERS
+
+.header--secondary
+	:background $blue
+	:color white
+	:padding 20px
+	.wrapper--flex 
+		:align-items center
+		:justify-content space-between
+	.actions 
+		a:first-child
+			:margin-right 12px	
+ 
+		
+	
 
 .resource--header
 	:margin 28px 0 40px
@@ -264,7 +298,29 @@ ul.tabs
 				:background #E6E6E6
 			&.active
 				:background $blue
-				:color white	
+				:color white
+
+
+// BOOTSY
+.wysihtml5-toolbar
+	:border 1px solid $light-grey
+	:display flex
+	:padding 12px 6px 0 !important
+	:background white
+	.bootsy-controls
+		:border-bottom 2px solid white
+		:margin-right 12px
+	.bootsy-controls.wysihtml5-command-active	
+		:color $blue
+		:border-bottom 2px solid $blue
+		:background white
+.wysihtml5-sandbox		
+	:border-radius 0px !important
+	:border 1px solid $light-grey !important
+	:border-top none !important
+
+
+
 
 
 
