@@ -74,20 +74,37 @@ ul.list--tags
 		div:first-of-type
 			:flex 0 0 200px
 			:font-weight bold	
+.list--drafts 
+	li 
+		a 
+			:display flex
+			:padding 20px 10px
+	li:nth-of-type(2n + 2)
+		:background $bg-grey	
+	span
+		:flex 1 0 100px		
+	span:first-of-type
+		:flex 0 0 350px
+		:font-weight bold
 .list--header
 	:color $dark-grey
 	:text-transform uppercase
-	:font-size 13px
+	:font-size 14px
+	:letter-spacing 0.5px
+	:font-weight bold
+	:border-bottom 3px solid $light-grey
+	:display flex
+	:padding 0 10px
 	label
 		:cursor pointer
-	.wrapper 
-		:border-bottom 3px solid $light-grey
-		:display flex
-		:padding 0 10px
+	div
+		:flex 1 0 100px
+	div:first-of-type
+		:flex 0 0 350px
 	&-glossary 
 		div:first-of-type
 			:flex 0 0 200px
-			:font-weight bold
+			:font-weight bold	
 			
 
 
