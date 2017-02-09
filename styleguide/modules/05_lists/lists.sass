@@ -73,19 +73,45 @@ ul.list--tags
 		+make-term-list
 		div:first-of-type
 			:flex 0 0 200px
-			:font-weight bold	
-.list--drafts 
+			:font-weight bold
+.list--lessons
 	li 
-		a 
+		>a 
 			:display flex
 			:padding 20px 10px
 	li:nth-of-type(2n + 2)
 		:background $bg-grey	
 	span
-		:flex 1 0 100px		
+		:flex 1 0 100px				
+.list--drafts, .list--bookmarked 	
 	span:first-of-type
 		:flex 0 0 350px
 		:font-weight bold
+.list--submitted, .list--lessons-admin
+	span:nth-of-type(3)		
+		:flex 0 0 350px
+		:font-weight bold
+.list--users
+	span:nth-of-type(3)	
+		:flex 0 0 350px	
+.list--bookmarked,.list--lessons-admin, .list--users
+	li 
+		:padding 20px 10px
+		:display flex	
+.list--browse
+	span:nth-of-type(2)
+		:flex 1 0 350px		
+.list--lessons
+	.pending
+		:color $orange
+	.public
+		:color $green	
+	.public, .pending
+		:font-family $font-llc
+		:text-transform uppercase
+		:font-size 13px
+		:font-weight bold	
+
 .list--header
 	:color $dark-grey
 	:text-transform uppercase
@@ -95,19 +121,23 @@ ul.list--tags
 	:border-bottom 3px solid $light-grey
 	:display flex
 	:padding 0 10px
-	form 
-		:display flex
-		:width 100%
 	label
 		:cursor pointer
 	div
 		:flex 1 0 100px
-	div:first-of-type
-		:flex 0 0 350px
+	&-drafts, &-bookmarked 
+		div:first-of-type
+			:flex 0 0 350px
+	&-submitted, &--lessons-admin, &--users
+		div:nth-of-type(3)
+			:flex 0 0 350px	
 	&-glossary 
 		div:first-of-type
 			:flex 0 0 200px
-			:font-weight bold	
+			:font-weight bold
+	&-browse 
+		div:nth-of-type(2)
+			:flex 0 0 350px			
 			
 
 

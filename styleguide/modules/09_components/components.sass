@@ -13,13 +13,15 @@ $grey-blue : #5e869b
 $light-blue : #3873a0
 $royal-blue : #0953a3
 $dark-blue : #1a3967
-
+.lessons-listing
+	:flex-wrap wrap
 .lesson
 	:color white
 	:max-width 500px
 	:position relative
 	:margin-right 5%
 	:margin-bottom 40px
+	:border-bottom 3px solid $yellow
 	+display-for(lg xl)
 		:width 30%
 		&:nth-of-type(3n+3)
@@ -32,15 +34,16 @@ $dark-blue : #1a3967
 		:width 100%
 		:margin-right 0
 	&--bar
-		:background $grey-blue
+		:background $blue-light
 		:text-transform uppercase
 		:padding 12px 15px
-		:border-radius 5px 5px 0 0
-		:font-size 13px
+		:font-size 14px
 		:letter-spacing 1px
+		:letter-spacing 0.5px
+		:position relative
 	&--title
-		:background $grey-blue
-		:background-image linear-gradient(to right, rgba(48, 186, 229, 0.4) 0%, rgba(48, 186, 229, 0.5) 59%, rgba(48, 186, 229, 0.65) 100%)
+		:background $blue
+		:background-image linear-gradient(to right, rgba(31, 72, 123, 0.4) 0%, rgba(31, 72, 123, 0.5) 59%, rgba(31, 72, 123, 0.65) 100%)
 		:background-size cover
 		:background-position center
 		:padding 20px
@@ -51,21 +54,26 @@ $dark-blue : #1a3967
 			p
 				:margin 0
 				:padding 0
-				:font-size 12px
+				:font-size 14px
 				:font-weight bold
+				:letter-spacing 0.5px
 				:text-transform uppercase
 				:line-height 18px
 				:color white
+				:font-family $font-quicksand
 		h2
-			:font-size 24px
-			:font-weight normal
+			:font-size 30px
+			:font-weight bold
 			:margin-bottom 50px
 	&--short-description
 		:background white
-		:border-radius 0 0 5px 5px
-		:color $grey
+		:color $black
 		:padding 0 20px 30px 20px
 		:position relative
+		p 
+			:color $black
+			:font-size 14px
+			:font-family $font-quicksand
 		// &:hover
 		// 	:background $grey-blue
 		// 	p
@@ -76,7 +84,7 @@ $dark-blue : #1a3967
 			:height 100%
 			:top 0
 			:left 0
-			:color $grey
+			:color $black
 			:background transparent
 			&:hover
 				:color white
@@ -87,77 +95,35 @@ $dark-blue : #1a3967
 			:border-top 1px solid transparent
 	&--likes
 		:position absolute
-		:right 20px
-		:bottom 34px
+		:top 0
+		:right 16px
+		:background $pink
+		.ribbon
+			:position relative
+			:display block
+			:padding 2px 0 12px
+			:width 30px
+			:text-align center
+			&:before, &:after 
+				:content ''
+				:position absolute
+				:border-bottom 10px solid $blue-light
+				:border-left 15px solid transparent
+				:border-right 15px solid transparent
+				:bottom 0
+				:left 0
+				
+			   
+		// .likes-count
 		a
-			:color rgba(181, 87, 87, 1)
+			// :color white
 			&:hover
 				:color rgba(181, 87, 87, 0.6)
 			&:focus
 				:text-decoration none
 			.likes-count
-				:color #333
+				:color white
 
-.lesson--level
-	&-1
-		a.button
-			&:hover
-				:border 2px solid $grey-blue
-				:background $grey-blue
-				:color #fff
-		.lesson--single-title-bar
-			:background $grey-blue
-		.list--tags
-			li
-				:background $grey-blue
-
-	&-2
-		.lesson--bar
-			:background $light-blue
-		.lesson--title
-			:background-color $light-blue
-		a.button
-			&:hover
-				:border 2px solid $light-blue
-				:background $light-blue
-				:color #fff
-		.lesson--single-title-bar
-			:background $light-blue
-		.list--tags
-			li
-				:background $light-blue
-
-	&-3
-		.lesson--bar
-			:background $royal-blue
-		.lesson--title
-			:background-color $royal-blue
-		a.button
-			&:hover
-				:border 2px solid $royal-blue
-				:background $royal-blue
-				:color #fff
-		.lesson--single-title-bar
-			:background $royal-blue
-		.list--tags
-			li
-				:background $royal-blue
-
-	&-4
-		.lesson--bar
-			:background $dark-blue
-		.lesson--title
-			:background-color $dark-blue
-		a.button
-			&:hover
-				:border 2px solid $dark-blue
-				:background $dark-blue
-				:color #fff
-		.lesson--single-title-bar
-			:background $dark-blue
-		.list--tags
-			li
-				:background $dark-blue
 .lesson--single-title-bar,
 .lesson--single-text,
 .lesson--single-title-img,
@@ -166,41 +132,101 @@ $dark-blue : #1a3967
 		:width 100% !important
 .lesson--single-title-bar
 	:width 70%
-	:border-top-left-radius 5px
 	:padding 25px
 	:color white
+	:background $blue
 	h2
 		:font-weight normal
-	h3:last-child 
+		:padding 0 4px
+	h3
 		:margin-bottom 0
-		:letter-spacing 0.25px
-	+display-for(sm xs)
-		:border-top-right-radius 5px
+		:font-size 16px 
+		a
+			:color white
+			:font-weight bold
+	h4 
+		:font-size 14px
+		:text-transform uppercase
+		:padding-bottom 12px
+		:border-bottom 1px solid white
+	h3, h4
+		:padding 10px 4px	
+.lesson--nav
+	:width 70%
+	:background $grey-edit
+	:padding 20px 25px
+	p 
+		:font-size 12px
+		:color $black
+	ul
+		:display flex
+		:padding 0
+		:margin 0
+		:text-transform uppercase
+		:font-size 12px
+		:font-weight bold
+		li 
+			:flex 1 0 auto
+			a 
+				:color $blue
+				:border-bottom 2px solid transparent
+				&:hover 
+					:color $black
+					:border-bottom 2px solid $black
+.lesson--share 
+	:width 30%
+	:background $medium-grey
 .lesson--single-text
 	:background white
 	:width 70%
-	:border-bottom-left-radius 5px
-	:padding 25px 50px 25px 25px
-	+display-for(sm xs)
-		:border-bottom-left-radius 0px
+	:padding 25px 25px 25px 15px
+	section 
+		.text-edit
+			:display none
 .lesson--single-title-img
 	:width 30%
-	:border-top-right-radius 5px
 	:background-size cover
 	:background-position center
 	:background-repeat no-repeat
 	:background-color grey
 	+display-for(sm xs)
-		:border-top-right-radius 0px
 		:height 200px
+.lesson--section-title
+	:text-transform uppercase
+	:color $blue	
+	:border-bottom 1px solid $blue
+	:margin 0
+	:padding 12px	
+	:position relative
+	:font-size 16px
+	:font-weight bold
+	&:hover
+		:background $blue
+		:color white
+		&:after
+			:color white
+	&.active
+		:background $blue
+		:color white
+		&:after
+			:color white
+			:transform rotate(0deg)	
+	&:after 
+		:content '⌃'
+		:transform rotate(180deg)
+		:color $blue
+		:position absolute
+		:right 12px
+		:top 30%
+		:font-weight bold
 .sidebar
 	:width 30%
-	:background #E2E2E2
-	:border-bottom-right-radius 5px
-	+display-for(sm xs)
-		:border-bottom-left-radius 5px
+	:background $grey-edit
 	&--text
 		:padding 25px
+
+.lesson--admin-edit
+	:background $grey-edit  			
 
 
 // GENERINC ELEMENTS
@@ -322,6 +348,28 @@ ul.tabs
 	:border-radius 0px !important
 	:border 1px solid $light-grey !important
 	:border-top none !important
+
+.modal-fixed
+  :position fixed
+  :top 30%
+  :left 50%
+  :width 80%
+  :max-width 600px
+  :transform translateX(-50%)
+  :z-index 10
+  :background white
+  :border 2px solid $black
+  :padding 20px 30px 
+  :text-align center
+  h3 
+  	:font-size 40px
+  .modal-close
+  	:position absolute
+  	:right 10px
+  	:top 10px
+  	:cursor pointer
+
+
 
 
 

@@ -10,9 +10,6 @@ select
 	:border-radius 0px
 	&:hover
 		:cursor pointer
-label 
-
-
 input, textarea, select
 	:width 100%
 	:padding 12px 6px
@@ -26,19 +23,94 @@ input[type=submit]
 	:margin-top -10px
 	:display block
 	:margin-bottom 10px
+.label-direction	
+	:color $medium-grey
+	:font-size 14px
+	:font-weight lighter
+	:font-family $font-quicksand	
+
+
+.form--new-lesson
+	input, textarea, select
+		:margin-bottom 20px
+		:color $medium-grey
+		:line-height 22px
+		:font-weight lighter
+		:font-family $font-quicksand
+	.select
+		:position relative
+		&:after
+			:content '▾'
+			:color $medium-grey
+			:position absolute	
+			:right 12px
+			:top 50%
+			:transform translateY(-50%)
+	.header--secondary 
+		:margin-bottom 30px
+	.lesson--admin-edit
+		:margin-bottom 30px
+		:padding 20px
+		&.wrapper--flex
+			:flex-wrap wrap
+		&-author
+			:width 50%
+			:margin-right 2%
+			input 
+				:color $black
+		&-color
+			:width 48%
+			:position relative
+			.color-swatch
+				:display block
+				:position absolute
+				:width 40px
+				:right 5px 
+				:top 5px
+				:bottom 5px 
+
+		&-verified
+			:width 28%	
+			:margin-right 2%
+		&-message
+			:width 70%
+			.message-for	
+				:color rgba(255,255,255, 0.9)
+				:text-transform uppercase
+				:font-family $font-quicksand
+				:background $medium-grey
+				:line-height 48px
+				:padding 0 10px
+			.wrapper--flex
+				:align-items stretch
+				input
+					:flex 1 0 auto
+		.lesson--admin-edit-verified, .lesson--admin-edit-message
+			label
+				:margin-bottom 12px
+
+		input
+				:width auto
+		input, select			
+				:margin-bottom 0
+	.lesson--admin-edit-author, .lesson--admin-edit-color
+		:display flex
+		:align-items center
+		:margin-bottom 30px
+		input
+			:flex 1 0 auto
+		label
+			:flex 0 1 auto
+			:margin-right 18px		
+		
 
 
 .wrapper.form--new-lesson
-	:border-radius 5px
 	:background white
 	:margin-top 30px
 	:margin-bottom 30px
 	textarea
 		:height 300px
-		:border 1px solid #333
-		:border-radius 5px
-	// input[type=submit]
-	// 	:border none
 	img
 		:margin-bottom 16px
 	.textarea-description
@@ -48,16 +120,19 @@ input[type=submit]
 		textarea
 			:height 700px
 	.wrapper--flex
-		:border-radius 5px
+		// :border-radius 5px
 	.content
 		:width 70%
 		:padding 25px
+		label
+			:font-family $font-quicksand
+			:font-weight lighter
 
 	.sidebar
 		:padding 25px
-		:border-top-right-radius 5px
+		// :border-top-right-radius 5px
 		+display-for(sm xs)
-			:border-top-right-radius 0px
+			// :border-top-right-radius 0px
 		.levels
 			input
 				:margin 0
@@ -76,9 +151,6 @@ input[type=submit]
 	label
 		:font-size 18px
 		:font-weight 100
-	// input[type='submit']
-	// 	:background $yellow	
-	// 	:padding 12px 16px
 	.wrapper--flex
 		:align-items flex-end
 		>div 
