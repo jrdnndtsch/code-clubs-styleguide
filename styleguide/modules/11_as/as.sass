@@ -16,6 +16,44 @@
     :font-size 22px 
     :color white
     :letter-spacing 0.5px
+.as--about-wrap
+  :padding 45vh 0 15vh
+  h1
+    :color white
+    :font-size 70px  
+    :font-weight bold
+    :text-transform uppercase
+.as--about-page
+  :padding 60px 0 0
+  p 
+    :color $black
+    a   
+      :font-weight bold
+  aside 
+    :flex 1 0 34%   
+    :margin-left 40px
+    :background $bg-grey
+    h2 
+      :color white
+      :background $light-black
+      :font-size 26px
+      :padding 10px 28px
+      :margin 0
+    >div 
+      :padding 20px
+      :text-align center
+      img 
+        :margin 20px 0 40px
+      .button
+        :margin-bottom 20px
+      p 
+        :width 80%
+        :margin 0 auto
+        :color $black
+  .button-boxes
+    :margin-top 60px 
+.as--about-page + .as--about-page
+  :padding-top 0                 
 .button-boxes
   :flex-wrap wrap
   :justify-content space-between
@@ -23,7 +61,7 @@
     :width 30%
     :text-align center 
     :background rgba(0,0,0,0.8)
-    :padding 30px 10px
+    :padding 30px
     :border 1px solid $yellow
     :margin-bottom 80px
     &:hover 
@@ -32,13 +70,20 @@
         :background $blue
         :border 2px solid $blue
         :color white  
-  h2 
+  h2, h3 
     :font-size 20px
     :font-family $font-quicksand
     :color white
     :text-transform uppercase 
     :font-weight lighter
     :margin-top 0
+    :margin-bottom 20px
+  &--light 
+    >a
+      :background white 
+      h3
+        :color $black
+
      
 .as--header-link
   :color $yellow  

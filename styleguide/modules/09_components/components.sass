@@ -330,7 +330,31 @@ ul.tabs
 				:background $blue
 				:color white
 
-
+.admin--users-export
+	:background $grey-edit
+	:padding 20px
+	:margin-bottom 40px
+	h2
+		:color $dark-grey
+		:font-size 26px
+		:text-transform uppercase
+		:border-bottom 2px solid $dark-grey
+		:margin-top 0
+	.users-exports-container
+		:display flex	
+		>div:last-of-type
+			:display flex
+			:align-items flex-end
+	.wrapper--flex
+		:flex-wrap wrap
+		:width 90%
+		div
+			:width 25%
+	label 
+		:font-family $font-quicksand
+		:text-transform uppercase
+		:font-weight lighter
+		:font-size 14px		
 // BOOTSY
 .wysihtml5-toolbar
 	:border 1px solid $light-grey
@@ -368,6 +392,29 @@ ul.tabs
   	:right 10px
   	:top 10px
   	:cursor pointer
+
+.modal--overlay
+	:position fixed
+	:top 0
+	:left 0
+	:right 0
+	:bottom 0
+	:background rgba(0,0,0,0.2)
+	:display none
+.modal.modal--about
+	:background white
+	:bottom auto
+	:width 80%
+	:margin 0 auto
+	:top 20%
+	:padding 30px
+	:border 1px solid lightgrey
+	:max-width 500px
+	input 
+		:margin-bottom 12px	
+
+
+ 	
 
 
 
