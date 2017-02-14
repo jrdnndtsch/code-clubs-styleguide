@@ -2,6 +2,11 @@
 #### A tool to make creating and maintaining styleguides easy.
 #####v2.0.6
 
+# To run: `harp server --port 8000`
+
+----------------------------------------------------
+
+
 For downloads, how to get started and detailed documentation please refer to the [Styleguide Website](http://hugeinc.github.io/styleguide/)
 
 #### Thanks to
