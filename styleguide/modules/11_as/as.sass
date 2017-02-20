@@ -375,25 +375,27 @@ label[for=user_remember_me]
 
 /* .slideThree */
 .slideThree 
-  :width 80px
-  :height 26px
-  :background #ccc
+  :width 140px
+  :height 40px
+  :background #FBE7CF
   :margin 20px auto
   :position relative
   :border-radius 50px
-  :box-shadow inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2)
+  // :box-shadow inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2)
   &:after
-    :content 'X'
-    :color #000
+    :content 'PENDING'
+    :line-height 40px !important
+    :color #E88F14
     :position absolute
-    :right 10px
+    :right 4px
     :z-index 0
     :font 12px/26px Arial, sans-serif
     :font-weight bold
-    :text-shadow 1px 1px 0px rgba(255,255,255,.15)
+    // :text-shadow 1px 1px 0px rgba(255,255,255,.15)
   &:before 
     :content '✓'
     :color green
+    :line-height 40px !important
     :position absolute
     :left 10px
     :z-index 0
@@ -401,35 +403,25 @@ label[for=user_remember_me]
     :font-weight bold
   label 
     :display block
-    :width 34px
-    :height 20px
+    :width 70px
+    :height 34px
     :cursor pointer
     :position absolute
     :top 3px
     :left 3px
     :z-index 1
-    :background #fcfff4
-    :background linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%)
+    :background #E88F14
+    :background linear-gradient(top, #E88F14, #FBE7CF)
     :border-radius 50px
     :transition all 0.4s ease
     :box-shadow 0px 2px 5px 0px rgba(0,0,0,0.3)
   input[type=checkbox]
     :visibility hidden
     &:checked + label
-      :left: 43px
+      :left: 66px
     
 
 /* end .slideThree */
-
-.form-actions,
-.as--other-links
-  :max-width 350px 
-  :margin 0 auto
-  a
-    :font-size 12px
-    &:hover
-      :color #000
-      :border-bottom 1px solid $yellow
 
 .as--admin-title 
   :font-size 40px
@@ -461,13 +453,38 @@ label[for=user_remember_me]
   &.wrapper--flex
     :align-items center
     > div 
-      :flex 1 0 auto
+      :flex 1 0 auto 
+  .form-actions
+    :display flex
+    :align-items flex-start
+    input.button:nth-of-type(1)
+      :margin-right 18px
+    .button
+      :flex 1 0 auto  
+  .control-label.boolean
+    :font-size 16px 
+    :font-family $font-quicksand
+    :text-transform initial  
+    :font-weight 100
+    :color $medium-grey 
+    :margin-bottom 24px 
+  p 
+    :color $black
+    :margin-bottom 32px      
 .as--profile-show
   img 
     :border-radius 50%
     :width 150px 
   .as--profile-wrapper
     :padding-bottom 20px
+.as--other-links
+  :font-size 13px
+  a 
+    :color $medium-grey
+    :display block 
+.as--other-links a:last-of-type
+  :margin-bottom 20px    
+       
 
 
 

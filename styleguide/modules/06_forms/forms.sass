@@ -19,6 +19,8 @@ input[type=checkbox]
 	:width auto
 input[type=submit]
 	:width auto	
+input[type=file]
+	:background white	
 .hint
 	:margin-top -10px
 	:display block
@@ -28,7 +30,12 @@ input[type=submit]
 	:font-size 14px
 	:font-weight lighter
 	:font-family $font-quicksand	
-
+.select2-container--default .select2-selection--multiple
+	:border-radius 0px
+	:border 1px solid #ccc
+	:width 100%
+	:max-width 100%
+.select2
 
 .form--new-lesson
 	input, textarea, select
@@ -39,6 +46,8 @@ input[type=submit]
 		:font-family $font-quicksand
 	.select
 		:position relative
+		:margin-bottom 20px
+		:width 100%
 		&:after
 			:content '▾'
 			:color $medium-grey
@@ -46,6 +55,8 @@ input[type=submit]
 			:right 12px
 			:top 50%
 			:transform translateY(-50%)
+		select 
+			:margin-bottom 0	
 	.header--secondary 
 		:margin-bottom 30px
 	.lesson--admin-edit
@@ -190,18 +201,4 @@ input[type=submit]
 			:flex 0 1 200px	
 			:margin-bottom 0
 			:margin-right 20px	
-		a 
-			:color $medium-grey
-			:text-decoration underline	
-			:font-size 12px
 
-// SIGN IN PAGE
-.user_email,
-.user_password,
-.user_remember_me,
-.user_password_confirmation 
-	:max-width 350px
-	:margin 0 auto
-.log-in
-	:text-align center
-	:display block
