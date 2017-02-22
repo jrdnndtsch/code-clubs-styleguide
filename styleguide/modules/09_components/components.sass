@@ -15,6 +15,10 @@ $royal-blue : #0953a3
 $dark-blue : #1a3967
 .lessons-listing
 	:flex-wrap wrap
+.lesson--more	
+	:display flex
+	:align-items center
+	:justify-content space-between
 .lesson
 	:color white
 	:max-width 500px
@@ -124,6 +128,24 @@ $dark-blue : #1a3967
 			.likes-count
 				:color white
 
+.lesson--share
+	:display flex
+	>div
+		:margin auto
+		:width 100%
+	p 
+		:color white
+		:text-align center
+	.wrapper--flex 
+		:justify-content space-between
+		:width 80%
+		:margin 0 auto
+		:align-items center
+	.share-email
+		:background $light-grey	
+		:font-size 12px
+		:padding 1px 6px
+
 .lesson--single-title-bar,
 .lesson--single-text,
 .lesson--single-title-img,
@@ -165,6 +187,8 @@ $dark-blue : #1a3967
 	.slideThree
 		:flex 1 0 auto
 		:margin-right 10px	
+	input	+ .button
+		:margin-left 10px
 
 				
 .lesson--nav
@@ -192,6 +216,16 @@ $dark-blue : #1a3967
 .lesson--share 
 	:width 30%
 	:background $medium-grey
+.lesson--nav, .lesson--share 	
+	+display-for(md sm xs)
+		:width 100%
+.lesson--nav-bar-sticky.wrapper	
+	:position fixed
+	:z-index 10	
+	:width 90%
+	:max-width 1146px
+	:top 0
+
 .lesson--single-text
 	:background white
 	:width 70%
@@ -205,6 +239,15 @@ $dark-blue : #1a3967
 	:background-position center
 	:background-repeat no-repeat
 	:background-color grey
+	:position relative
+	// #sticky-nav-target	
+	// 	:width 10px
+	// 	:height 10px 
+	// 	:display block
+	// 	:background red
+	// 	:position absolute
+	// 	:bottom 0
+	// 	:right 0
 	+display-for(sm xs)
 		:height 200px
 .lesson--section-title
@@ -216,6 +259,7 @@ $dark-blue : #1a3967
 	:position relative
 	:font-size 16px
 	:font-weight bold
+	:cursor pointer
 	&:hover
 		:background $blue
 		:color white
@@ -235,15 +279,38 @@ $dark-blue : #1a3967
 		:right 12px
 		:top 30%
 		:font-weight bold
+
 .sidebar
-	:width 30%
-	:background $grey-edit
-	&--text
-		:padding 25px
+		:width 30%
+		:background $grey-edit
+		&--text
+			:padding 25px
+		+display-for(md sm xs)
+			:width 100%	
+.form--new-lesson		
+	.content
+			:width 70%
+			:padding 25px	
+			+display-for(md sm xs)
+				:width 100%	
+	.sidebar
+		:width 30%
+		:background $grey-edit
+		&--text
+			:padding 25px
+		+display-for(md sm xs)
+			:width 100%	
+	.wrapper--flex
+		:flex-wrap wrap			
 
 .lesson--admin-edit
 	:background $grey-edit  			
-
+.lesson--admin.as--search-wrap
+	:display flex
+	:align-items center
+	input:first-child
+		:margin-bottom 0
+		:padding 7px 6px
 
 // GENERINC ELEMENTS
 

@@ -4,9 +4,11 @@
 // $yellow : #FFCE06
 .as--home-wrap 
   :min-height 70vh
-.as--landing-page  
+.as--landing-page.wrapper  
   :color white
   :padding 120px 7% 40px 0
+  +display-for(xs)
+    :padding 60px 12px 40px
   h1 
     :font-size 54px
     :font-weight bold
@@ -16,6 +18,11 @@
     :font-size 22px 
     :color white
     :letter-spacing 0.5px
+  +display-for(sm xs)
+    h1
+      :font-size 32px
+    p 
+      :font-size 16px  
 .as--about-wrap
   :padding 45vh 0 15vh
   h1
@@ -23,6 +30,10 @@
     :font-size 70px  
     :font-weight bold
     :text-transform uppercase
+.as--about-page.wrapper--flex
+  +display-for(sm xs)
+    :flex-wrap wrap 
+    :margin-top 20px   
 .as--about-page
   :padding 60px 0 0
   p 
@@ -33,6 +44,10 @@
     :flex 1 0 34%   
     :margin-left 40px
     :background $bg-grey
+    +display-for(sm xs)
+      :margin-left 0
+      :flex 1 0 100%
+      :margin-top 40px
     h2 
       :color white
       :background $light-black
@@ -64,6 +79,9 @@
     :padding 30px
     :border 1px solid $yellow
     :margin-bottom 80px
+    +display-for(sm xs)
+      :width 100%
+      :margin-bottom 20px
     &:hover 
       :border 1px solid $blue
       .button--primary 
@@ -281,8 +299,6 @@
 .as--no-top-margin
   :margin-top 0
 .wrapper.as--lesson-wrapper
-  :margin-top 30px
-  :margin-bottom 30px
   +display-for(xs)
     :width 100% !important
 
@@ -350,19 +366,22 @@ label[for=user_remember_me]
 .as--browse-title
   :position relative
   .grid, .list
-    :width 20px
-    :height 20px
     :display block
     :position absolute 
     :cursor pointer
+    :color $grey
+    :font-size 30px 
+  i
+    :line-height 46px
+    :cursor pointer
   .list 
-    :background blue
     :right 0
     :top 0
   .grid   
-    :background $light-grey
     :right 40px
     :top 0
+  input[type="radio"]:checked + label
+    :color $blue  
 
 .as--lesson-author
   :width 100%
@@ -477,6 +496,17 @@ label[for=user_remember_me]
     :width 150px 
   .as--profile-wrapper
     :padding-bottom 20px
+  .button
+    :margin-right 12px 
+  .list--profile-info
+    li 
+      :margin-bottom 12px
+      :font-family $font-quicksand
+      span 
+        :font-weight bold
+        :margin-right 12px 
+    li:last-of-type
+      :margin-bottom 32px      
 .as--other-links
   :font-size 13px
   a 

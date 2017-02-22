@@ -68,7 +68,9 @@ $grid-base: 40
 
 //container wrapper
 .wrapper
-	@extend %make-adaptive
+	:width 90%
+	:max-width 1146px
+	:margin 0 auto
 	:box-sizing border-box
 	:position relative
 	+display-for(xl lg md sm)
@@ -82,9 +84,6 @@ $grid-base: 40
 		&-wrap
 			:align-items stretch
 			:flex-wrap wrap
-		// :flex 1 0 50%
-		// :justify-content space-between
-		// :flex-flow row wrap
 .flex-even
 	div
 		:width calc(50% - 6px)

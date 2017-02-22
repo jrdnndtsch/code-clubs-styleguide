@@ -1,4 +1,5 @@
 @import '../02_colors/colors.sass'
+@import '../10_grid/grid.sass'
 
 .button
 	:cursor pointer
@@ -15,6 +16,8 @@
 	:-moz-transition background-color 0.3s,opacity 0.3s
 	:-o-transition background-color 0.3s,opacity 0.3s
 	:transition background-color 0.3s,opacity 0.3s
+	+display-for(xs)
+		:padding 8px 20px
 
 
 //PRIMARY	

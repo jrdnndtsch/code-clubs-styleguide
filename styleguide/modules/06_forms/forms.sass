@@ -37,7 +37,7 @@ input[type=file]
 	:max-width 100%
 .select2
 
-.form--new-lesson
+.form--new-lesson .content, .sidebar
 	input, textarea, select
 		:margin-bottom 20px
 		:color $medium-grey
@@ -59,60 +59,75 @@ input[type=file]
 			:margin-bottom 0	
 	.header--secondary 
 		:margin-bottom 30px
-	.lesson--admin-edit
-		:margin-bottom 30px
-		:padding 20px
-		&.wrapper--flex
-			:flex-wrap wrap
-		&-author
-			:width 50%
-			:margin-right 2%
-			input 
-				:color $black
-		&-color
-			:width 48%
-			:position relative
-			.color-swatch
-				:display block
-				:position absolute
-				:width 40px
-				:right 5px 
-				:top 5px
-				:bottom 5px 
+.lesson--admin-edit
+	:margin-bottom 30px
+	:padding 20px
+	&.wrapper--flex
+		:flex-wrap wrap
+	&-author
+		:width 50%
+		:margin-right 2%
+		input 
+			:color $black
+		+display-for(sm xs)
+			:width 100%
+			:margin-right 0	
+	&-color
+		:width 48%
+		:position relative
+		.color-swatch
+			:display block
+			:position absolute
+			:width 40px
+			:right 5px 
+			:top 5px
+			:bottom 5px 
+		+display-for(sm xs)
+			:width 100%
+			:margin-right 0			
 
-		&-verified
-			:width 28%	
-			:margin-right 2%
-		&-message
-			:width 70%
-			.message-for	
-				:color rgba(255,255,255, 0.9)
-				:text-transform uppercase
-				:font-family $font-quicksand
-				:background $medium-grey
-				:line-height 48px
-				:padding 0 10px
-			.wrapper--flex
-				:align-items stretch
-				input
-					:flex 1 0 auto
-		.lesson--admin-edit-verified, .lesson--admin-edit-message
-			label
-				:margin-bottom 12px
-
-		input
-				:width auto
-		input, select			
-				:margin-bottom 0
-	.lesson--admin-edit-author, .lesson--admin-edit-color
-		:display flex
-		:align-items center
-		:margin-bottom 30px
-		input
-			:flex 1 0 auto
+	&-verified
+		:width 28%	
+		:margin-right 2%
+		+display-for(sm xs)
+			:width 100%
+			:margin-right 0	
+			:margin-bottom 20px
+	&-message
+		:width 70%
+		.message-for	
+			:color rgba(255,255,255, 0.9)
+			:text-transform uppercase
+			:font-family $font-quicksand
+			:background $medium-grey
+			:line-height 48px
+			:padding 0 10px
+			+display-for(sm xs)
+				:width 100%
+		.wrapper--flex
+			:align-items stretch
+			input
+				:flex 1 0 auto
+		+display-for(sm xs)
+			:width 100%
+			:margin-right 0			
+	.lesson--admin-edit-verified, .lesson--admin-edit-message
 		label
-			:flex 0 1 auto
-			:margin-right 18px		
+			:margin-bottom 12px
+
+	input
+			:width auto
+	input, select			
+			:margin-bottom 0
+.lesson--admin-edit-author, .lesson--admin-edit-color
+	:display flex
+	:align-items center
+	:margin-bottom 30px
+	input
+		:flex 1 0 auto
+	label
+		:flex 0 1 auto
+		:margin-right 18px		
 		
 
 
@@ -133,17 +148,14 @@ input[type=file]
 	.wrapper--flex
 		// :border-radius 5px
 	.content
-		:width 70%
-		:padding 25px
 		label
 			:font-family $font-quicksand
 			:font-weight lighter
 
 	.sidebar
 		:padding 25px
-		// :border-top-right-radius 5px
-		+display-for(sm xs)
-			// :border-top-right-radius 0px
+		textarea
+			:height 200px
 		.levels
 			input
 				:margin 0
@@ -184,6 +196,19 @@ input[type=file]
 			:content '*'
 			:color $red
 			:margin-left 2px
+	.select
+		:position relative
+		:margin-bottom 20px
+		:width 100%
+		&:after
+			:content '▾'
+			:color $medium-grey
+			:position absolute	
+			:right 12px
+			:top 50%
+			:transform translateY(-50%)
+		select
+			:margin-bottom 0			
 	.internal
 		:color $medium-grey					
 		:font-size 12px

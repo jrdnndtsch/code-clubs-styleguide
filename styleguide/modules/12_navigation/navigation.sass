@@ -8,6 +8,7 @@
   :right 0
   :transform translateY(-50%)
   :cursor pointer
+  :z-index 100
   +display-for(md sm xs)
     :float right 
     :display block
@@ -58,7 +59,9 @@
     :text-transform uppercase
     :display inline-block
     :text-align center
-    :width 100%
+    :width 100% 
+  a.nav--hamburger
+    :width auto  
   .logo-container 
     :flex 0 0 340px  
   .logo
@@ -99,6 +102,8 @@
       :flex 1 0 auto
       :position relative
       :padding 12px 0
+      +display-for(md sm xs)
+        :padding 12px
     a
       :color $light-grey
       :line-height 33px
@@ -110,10 +115,11 @@
       +display-for(md sm xs)
         :display block
         :width 100%
-        :padding 20px 10px
-        :font-size 32px
+        :padding 0
+        :font-size 20px
         :color white
-        :text-align center
+        :text-align left
+        :border-bottom 3px solid $yellow     
         &:hover
           :color rgba(255,255,255,0.6)
     img
@@ -129,8 +135,14 @@
         :vertical-align middle
         img 
           :display block
+          +display-for(md sm xs)
+            :display none
     .nav--link-arrow
-      :font-size 8px
+      :font-size 13px
+      :position relative
+      :top -2px
+      +display-for(md sm xs)
+        :float right
     .nav--links-sub
       :border-top 1px solid $yellow
       :border-bottom 1px solid $blue
@@ -139,6 +151,11 @@
       :width 100%
       :top calc(100% - 4px)
       :z-index 10
+      +display-for(md sm xs)
+        :position static
+        :background $black
+        :border-top none
+        :border-bottom none
       li 
         :padding 0 6px
       a 
@@ -148,10 +165,18 @@
         :color $black 
         :border-bottom 1px solid $light-grey
         :text-align left
-        :text-transform capitalize  
+        :text-transform capitalize 
+        +display-for(md sm xs)
+             :color white 
+             :border-bottom 2px solid $blue
+             :font-size 16px
+             :color $dark-grey
+             :padding 8px
       li:last-of-type
-        a 
-          :border-bottom none   
+        +display-for(xl lg)
+          a 
+            :border-bottom none 
+
 .nav--links.active
   +display-for(md sm xs)
     :display block
@@ -165,6 +190,8 @@ footer.nav--footer
       :max-width 80%
       :margin 0 auto
       :padding-top 20px
+    +display-for(md sm xs)
+      :flex-wrap wrap  
   +display-for(xs)
     :padding 0
   h3
@@ -193,13 +220,14 @@ footer.nav--footer
     :width 30%
     &:first-of-type
       +display-for(md)
-        :width 35%
+        :width 55%
     &:last-of-type
       :border-left 1px solid $light-grey
       :border-right 1px solid $light-grey
       :padding-left 28px
       +display-for(md)
-        :width 25%
+        :width 45%
+        :border-right 1px solid transparent
       +display-for(sm xs)
         :padding-left 0
         :border-right none
