@@ -1,9 +1,27 @@
 h2.huge-module__title=name
 each paragraph in items.intro
 	p.huge-module__paragraph!=paragraph
-ul.huge-list--unstyled.list-colors
-	each color, index in items.colors
-		- var last = index == items.colors.length - 1 ? 'end' : ''
-		li(class="small-12 medium-2 column #{last}")
-			div(class="color #{color.className}")
-				p .#{color.className}
+div.color-block 	
+	h3 Primary Colors
+	ul.huge-list--unstyled.list-colors
+		each color, index in items.primary_use
+			- var last = index == items.primary_use.length - 1 ? 'end' : ''
+			li(class="small-12 medium-2 column #{last}")
+				div(class="color #{color.variable}")
+					p $#{color.variable}
+div.color-block					
+	h3 Greys
+	ul.huge-list--unstyled.list-colors
+		each color, index in items.greys
+			- var last = index == items.greys.length - 1 ? 'end' : ''
+			li(class="small-12 medium-2 column #{last}")
+				div(class="color #{color.variable}")
+					p $#{color.variable}						
+div.color-block					
+	h3 Accent Colors
+	ul.huge-list--unstyled.list-colors
+		each color, index in items.accent
+			- var last = index == items.accent.length - 1 ? 'end' : ''
+			li(class="small-12 medium-2 column #{last}")
+				div(class="color #{color.variable}")
+					p $#{color.variable}				

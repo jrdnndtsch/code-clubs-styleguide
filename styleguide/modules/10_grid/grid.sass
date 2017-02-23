@@ -95,14 +95,6 @@ $grid-base: 40
 .wrapper--flex.tab-content.current
 	:display flex
 
-.wrapper--secondary
-	:background white
-	:border-radius 5px
-	:padding 0 70px
-	:margin-top 60px
-	:margin-bottom 30px
-	+display-for(sm xs)
-		:padding 0 40px
 .wrapper--small
 	:width 90%
 	:max-width 600px
@@ -110,18 +102,6 @@ $grid-base: 40
 	h2 
 		:margin-bottom 12px	
 		:text-transform uppercase
-
-	
-.container--style-guide
-	ul
-		:display flex
-		:justify-content space-between
-	li
-		:height 100px
-		:background lightgrey
-		+make-column(9)
-		&:nth-of-type(2n + 1)
-			:background rgba(0,0,0,0.1)
 
 img
 	:max-width 100%

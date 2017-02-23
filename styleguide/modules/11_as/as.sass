@@ -1,9 +1,6 @@
 @import '../10_grid/grid.sass'
 @import '../02_colors/colors.sass'
-// $green : #00a076
-// $yellow : #FFCE06
-.as--home-wrap 
-  :min-height 70vh
+
 .as--landing-page.wrapper  
   :color white
   :padding 120px 7% 40px 0
@@ -50,7 +47,7 @@
       :margin-top 40px
     h2 
       :color white
-      :background $light-black
+      :background $black
       :font-size 26px
       :padding 10px 28px
       :margin 0
@@ -113,8 +110,14 @@
       :flex 1 0 auto
     .wrapper--flex
       :flex-wrap wrap
+      +display-for(lg md sm xs)
+        :width 100%
       div 
-        :flex 1 1 250px
+        :flex 1 1 45%
+        +display-for(lg md sm xs)
+          :flex 1 0 100%
+    +display-for(lg md sm xs)
+      :flex-wrap wrap    
   select
     :background $light-grey
     :color $black
@@ -130,6 +133,8 @@
     :margin-bottom 20px
     &:nth-of-type(2n + 2)
       :margin-right 0
+    +display-for(lg md sm xs)
+      :margin-right 0  
     &:after
       :content '\25BC'
       :position absolute
@@ -163,6 +168,8 @@
       :display flex
       :align-items center
       :margin-left 5%
+      +display-for(lg md sm xs)
+        :margin-left 0
     input[type="checkbox"]
       :margin 0 10px 0 0
     span 
@@ -369,7 +376,7 @@ label[for=user_remember_me]
     :display block
     :position absolute 
     :cursor pointer
-    :color $grey
+    :color $light-grey
     :font-size 30px 
   i
     :line-height 46px

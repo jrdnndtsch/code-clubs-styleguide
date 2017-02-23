@@ -1,6 +1,8 @@
 @import '../02_colors/colors.sass'
 @import '../10_grid/grid.sass'
+@import '../03_typography/typography.sass'
 
+// GENERIC STRATER FOR BUTTON
 .button
 	:cursor pointer
 	:text-decoration none
@@ -24,7 +26,7 @@
 .button--primary
 	:border 2px solid $yellow
 	:color $black
-	:background $yellow	
+	:background $yellow
 	&:hover 
 		:background transparent
 //SECONDARY
@@ -36,63 +38,34 @@
     	:background $yellow
     	:color $dark-grey
 
-
-
-
-.bootsy--buttons 
-	:margin-right 12px	
-.button--skinny
-	:padding 8px 32px
-	:font-weight 100
-	:font-size 13px
-	:border 2px solid $yellow
-	&:hover 
-		:background transparent		
-
-.button--submit
-	:background $yellow	
-	:padding 12px 16px
-
-
-.button--black
+.button--black // button in the lesson listings on the from page
 	:background transparent
 	:border 2px solid $black
 	:font-size 12px
 	:padding 5px 14px		
 
 
+.bootsy--buttons 
+	:margin-right 12px	
 
 
-.button--tertiary
-	:background $yellow
-	:color black
-	:text-transform uppercase
-	:padding 6px 10px
-	:border none
-	:border-radius 5px
-	:border 1px solid $yellow
-	:margin-top 30px
-	:font-weight normal
-	:font-family montserrat
-	&:hover
-		:background black
-		:text-decoration none !important
-		:color $yellow
-		:border 1px solid black
-
-.button--large
-	:padding 10px 12px
-	:font-size 20px
-
-#buttons
-	.button
-		:margin-bottom 20px
+//LINKS		
 
 .link--underlined 
 	:color $dark-grey 
-	:text-decoration underline 
+	:border-bottom 1px solid $dark-grey
 	:text-transform uppercase
 	:font-size 13px
+	:transition all 0.1s ease
+	&:hover
+		:border-bottom 1px solid transparent	
+
 .link--underlined-small
 	:text-transform initial
 	:font-family $font-quicksand	
+
+
+// FOR THE STYLEGUIDE
+#buttons
+	.button
+		:margin-bottom 20px

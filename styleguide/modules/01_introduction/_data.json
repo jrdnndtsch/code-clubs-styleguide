@@ -3,7 +3,7 @@
 	"name": "Introduction",
 	"scripts": ["introduction.js"],
 	"items" : [
-        "Hello! Welcome to the Code Clubs Style Guide, a tool to make updating and maintaining code easy!",
+        "Hello! Welcome to the Teachers Learning Code Style Guide, a tool to make updating and maintaining code easy!",
         "This style guide is based on the project by Huge. Check out the repo <a href='http://github.com/hugeinc/styleguide'>on Github</a>. You can read the documentation <a href='http://hugeinc.github.io/styleguide/'>here</a>."
     ]
 }

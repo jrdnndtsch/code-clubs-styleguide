@@ -2,13 +2,46 @@
     "id": "colors",
     "name": "Colors",
     "items": {
-        "intro": ["The main color for Kids Learning Code Green. Complimentary colors can be found on materials throughout the site"],
-        "colors": [
+        "intro": ["Colors used throughout the Teachers Learning Code Site"],
+        "primary_use": [
             {
-                "className": "grey"
+                "variable": "yellow"
             },
             {
-                "className" : "yellow"
+                "variable" : "black"
+            }, 
+            {
+                "variable" : "blue"
+            }
+        ], 
+        "greys": [
+            {
+                "variable" : "dark-grey"
+            }, 
+            {
+                "variable" : "medium-grey"
+            }, 
+            {
+                "variable" : "light-grey"
+            }, 
+            {
+                "variable" : "bg-grey"
+            }
+        ],
+        "accent" : [
+            {
+                "variable" : "light-blue"
+            }, {
+                "variable" : "red"
+            }, 
+            {
+                "variable" : "pink"
+            },
+            {
+                "variable" : "green"
+            }, 
+            {
+                "variable" : "orange"
             }
         ]
     }

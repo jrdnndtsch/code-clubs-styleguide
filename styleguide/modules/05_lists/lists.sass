@@ -1,5 +1,3 @@
-$yellow : #FFCE06
-
 =make-term-list
 	:display flex
 	:border-bottom 1px solid $light-grey
@@ -11,29 +9,32 @@ ol, ul
 	:margin 0 0 12px 0
 	:padding 0
 	:list-style none
-ul.list
-	li
-		:padding-left 20px
-		:position relative
-		&:before
-			:content '•'
-			:font-size 24px
-			:top 0
-			:color $yellow
-			:position absolute
-			:left 0
-			:line-height 30px
-ol.list
-	li
-		:counter-increment step-counter
-		:padding-left 20px
-		:position relative
-		&:before
-			:content counter(step-counter)
-			:position absolute
-			:top 0
-			:left 0
-			:color $yellow
+
+
+// TODO - waiting to see if this is needed ==================
+// ul.list
+// 	li
+// 		:padding-left 20px
+// 		:position relative
+// 		&:before
+// 			:content '•'
+// 			:font-size 24px
+// 			:top 0
+// 			:color $yellow
+// 			:position absolute
+// 			:left 0
+// 			:line-height 30px
+// ol.list
+// 	li
+// 		:counter-increment step-counter
+// 		:padding-left 20px
+// 		:position relative
+// 		&:before
+// 			:content counter(step-counter)
+// 			:position absolute
+// 			:top 0
+// 			:left 0
+// 			:color $yellow
 
 ul.list--tags
 	.title
@@ -46,15 +47,36 @@ ul.list--tags
 		:font-size 20px
 	li
 		:padding 4px 6px
-		:background $yellow
+		:background $blue
 		:color white
 		:text-transform uppercase
 		:display inline-block
 		:margin-right 4px
 		:margin-bottom 4px
 		&:last-of-type
-			:margin-right 0
+			:margin-right 0	
 			
+.list--suggested-lessons-edit
+	li 
+		:margin-bottom 8px
+		:display flex
+		:align-items center
+	a.suggested-delete
+		:background $blue
+		:color white
+		:width 18px
+		:height 18px
+		:border-radius 50%	
+		:display inline-block	
+		:text-align center
+		:line-height 18px
+		:font-size 20px
+		:font-weight bold
+		:margin-right 6px			
+
+
+
+// TABLE LIST VIEW PARTIALS					
 .list--admin 
 	li 
 		+make-term-list
@@ -100,7 +122,12 @@ ul.list--tags
 		:display flex	
 .list--browse
 	span:nth-of-type(2)
-		:flex 1 0 350px		
+		:flex 0 0 350px	
+	span:nth-of-type(5)
+		:flex 0 0 150px	
+		:padding-right 8px
+	span:nth-of-type(6)
+		:padding-right 8px			
 .list--lessons
 	.pending
 		:color $orange
@@ -112,6 +139,8 @@ ul.list--tags
 		:font-size 13px
 		:font-weight bold	
 
+
+// TABLE HEADER LIST VIEW PARTIALS
 .list--header
 	:color $dark-grey
 	:text-transform uppercase
@@ -140,25 +169,11 @@ ul.list--tags
 	&-browse 
 		div:nth-of-type(2)
 			:flex 0 0 350px	
+		div:nth-of-type(5)
+			:flex 0 0 150px	
 
 
-.list--suggested-lessons-edit
-	li 
-		:margin-bottom 8px
-		:display flex
-		:align-items center
-	a.suggested-delete
-		:background $blue
-		:color white
-		:width 18px
-		:height 18px
-		:border-radius 50%	
-		:display inline-block	
-		:text-align center
-		:line-height 18px
-		:font-size 20px
-		:font-weight bold
-		:margin-right 6px
+
 			
 
 

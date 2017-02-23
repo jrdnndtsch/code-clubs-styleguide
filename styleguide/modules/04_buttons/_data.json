@@ -1,19 +1,26 @@
 {
 	"id": "buttons",
 	"name": "Buttons",
-	"hasScript": "yes",
 	"items": [
 	    {
-	        "buttonName" : "Load more",
+	        "buttonName" : "button--primary",
 	        "className": "button button--primary"
 	    },
 	    {
-	    	"buttonName" : "subscribe",
-	    	"className": "button button--secondary font-quicksand"
+	    	"buttonName" : "button--secondary",
+	    	"className": "button button--secondary"
 	    }, 
 	    {
-	    	"buttonName" : "subscribe", 
-	    	"className" : "button button--tertiary font-quicksand"
+	    	"buttonName" : "button--black", 
+	    	"className" : "button button--black"
+	    }, 
+	    {
+	    	"buttonName" : "link--underlined", 
+	    	"className" : "link--underlined"
+	    }, 
+	    {
+	    	"buttonName" : "link--underlined-small", 
+	    	"className" : "link--underlined link--underlined-small"
 	    }
 	]
 }

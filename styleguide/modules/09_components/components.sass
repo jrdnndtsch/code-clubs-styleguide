@@ -1,24 +1,25 @@
 @import '../10_grid/grid.sass'
 
-$green : #00a076
-$green-dark: rgba(0, 117, 86, 1)
-$purple : purple
-$yellow : #FFCE06
-$grey: #555
-$blue: rgba(69, 69, 131, 1)
-$purple: rgba(93, 88, 129, 1)
+//HOME
+.home--wrap
+	:position relative
+	:overflow hidden
+	main 
+		:position absolute
+		:width 100%
+		:top 0
+		:z-index 10
+	video
+		:min-height 100vh
+		:width auto
+		:display block
 
-// LESSON LEVELS
-$grey-blue : #5e869b
-$light-blue : #3873a0
-$royal-blue : #0953a3
-$dark-blue : #1a3967
+// BROWSE LESSONS     ============================================
+
 .lessons-listing
 	:flex-wrap wrap
-.lesson--more	
-	:display flex
-	:align-items center
-	:justify-content space-between
+	:align-items flex-start
+
 .lesson
 	:color white
 	:max-width 500px
@@ -38,7 +39,7 @@ $dark-blue : #1a3967
 		:width 100%
 		:margin-right 0
 	&--bar
-		:background $blue-light
+		:background $light-blue
 		:text-transform uppercase
 		:padding 12px 15px
 		:font-size 14px
@@ -51,7 +52,6 @@ $dark-blue : #1a3967
 		:background-size cover
 		:background-position center
 		:padding 20px
-
 		span
 			:display block
 			:margin-bottom 30px
@@ -78,10 +78,10 @@ $dark-blue : #1a3967
 			:color $black
 			:font-size 14px
 			:font-family $font-quicksand
-		// &:hover
-		// 	:background $grey-blue
-		// 	p
-		// 		:color white
+			:margin-top 0
+			:margin-bottom 30px
+			:padding-top 15px
+			:border-top 1px solid transparent
 		a.short-description
 			:position absolute
 			:width 100%
@@ -92,11 +92,15 @@ $dark-blue : #1a3967
 			:background transparent
 			&:hover
 				:color white
-		p
-			:margin-top 0
-			:margin-bottom 30px
-			:padding-top 15px
-			:border-top 1px solid transparent
+	&--more	
+		:display flex
+		:align-items center
+		:justify-content space-between	
+		+display-for(lg)
+			:flex-direction column
+			:align-items flex-start
+			a + svg 
+				:margin-top 12px	
 	&--likes
 		:position absolute
 		:top 0
@@ -111,24 +115,17 @@ $dark-blue : #1a3967
 			&:before, &:after 
 				:content ''
 				:position absolute
-				:border-bottom 10px solid $blue-light
+				:border-bottom 10px solid $light-blue
 				:border-left 15px solid transparent
 				:border-right 15px solid transparent
 				:bottom 0
 				:left 0
-				
-			   
-		// .likes-count
-		a
-			// :color white
-			&:hover
-				:color rgba(181, 87, 87, 0.6)
-			&:focus
-				:text-decoration none
-			.likes-count
-				:color white
+		.likes-count
+			:color white
 
-.lesson--share
+// SINGLE LESSON 	=======================================		
+
+.lesson--single-share
 	:display flex
 	>div
 		:margin auto
@@ -145,11 +142,12 @@ $dark-blue : #1a3967
 		:background $light-grey	
 		:font-size 12px
 		:padding 1px 6px
-
+.lesson--single-title.wrapper
+	:margin-top 40px 
 .lesson--single-title-bar,
 .lesson--single-text,
 .lesson--single-title-img,
-.sidebar
+.lesson--single-sidebar
 	+display-for(sm xs)
 		:width 100% !important
 .lesson--single-title-bar
@@ -193,7 +191,7 @@ $dark-blue : #1a3967
 				
 .lesson--nav
 	:width 70%
-	:background $grey-edit
+	:background $bg-grey
 	:padding 20px 25px
 	p 
 		:font-size 12px
@@ -213,10 +211,10 @@ $dark-blue : #1a3967
 				&:hover 
 					:color $black
 					:border-bottom 2px solid $black
-.lesson--share 
+.lesson--single-share 
 	:width 30%
 	:background $medium-grey
-.lesson--nav, .lesson--share 	
+.lesson--nav, .lesson--single-share 	
 	+display-for(md sm xs)
 		:width 100%
 .lesson--nav-bar-sticky.wrapper	
@@ -240,14 +238,6 @@ $dark-blue : #1a3967
 	:background-repeat no-repeat
 	:background-color grey
 	:position relative
-	// #sticky-nav-target	
-	// 	:width 10px
-	// 	:height 10px 
-	// 	:display block
-	// 	:background red
-	// 	:position absolute
-	// 	:bottom 0
-	// 	:right 0
 	+display-for(sm xs)
 		:height 200px
 .lesson--section-title
@@ -280,9 +270,9 @@ $dark-blue : #1a3967
 		:top 30%
 		:font-weight bold
 
-.sidebar
+.lesson--single-sidebar
 		:width 30%
-		:background $grey-edit
+		:background $bg-grey
 		&--text
 			:padding 25px
 		+display-for(md sm xs)
@@ -293,9 +283,9 @@ $dark-blue : #1a3967
 			:padding 25px	
 			+display-for(md sm xs)
 				:width 100%	
-	.sidebar
+	.lesson--single-sidebar
 		:width 30%
-		:background $grey-edit
+		:background $bg-grey
 		&--text
 			:padding 25px
 		+display-for(md sm xs)
@@ -304,7 +294,7 @@ $dark-blue : #1a3967
 		:flex-wrap wrap			
 
 .lesson--admin-edit
-	:background $grey-edit  			
+	:background $bg-grey  			
 .lesson--admin.as--search-wrap
 	:display flex
 	:align-items center
@@ -414,7 +404,7 @@ ul.tabs
 				:color white
 
 .admin--users-export
-	:background $grey-edit
+	:background $bg-grey
 	:padding 20px
 	:margin-bottom 40px
 	h2
@@ -456,6 +446,9 @@ ul.tabs
 	:border 1px solid $light-grey !important
 	:border-top none !important
 
+
+
+// MODALS =========================================
 .modal-fixed
   :position fixed
   :top 30%
