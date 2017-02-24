@@ -8,7 +8,7 @@
   :right 0
   :transform translateY(-50%)
   :cursor pointer
-  :z-index 100
+  :z-index 201
   +display-for(md sm xs)
     :float right 
     :display block
@@ -35,7 +35,7 @@
       :background white
       :transition all 0.3s
 .nav--hamburger.active
-  :top 0
+  :top 10px
   :transform translateY(0)
   +display-for(md sm xs)
     :padding 11px 0 17px
@@ -55,6 +55,8 @@
 .nav--main
   :background $black
   :line-height 30px
+  .wrapper--flex
+    :align-items center
   a
     :text-transform uppercase
     :display inline-block
@@ -68,6 +70,8 @@
     :font-size 20px
     :padding 12px 0
     :display block
+    a 
+      :display flex
     +display-for(md sm xs)
       :z-index 20
       :display block
@@ -93,7 +97,8 @@
       :width 100%
       :position absolute
       :left 0
-      :z-index 10
+      :top 0
+      :z-index 200
       :background #1a1a1a
       :display none
       :height 100vh
@@ -219,8 +224,11 @@ footer.nav--footer
   ul
     :width 30%
     &:first-of-type
+      :width 35%
       +display-for(md)
         :width 55%
+      +display-for(sm xs)
+        :width 100%  
     &:last-of-type
       :border-left 1px solid $light-grey
       :border-right 1px solid $light-grey
@@ -312,3 +320,6 @@ footer.nav--sponsor
     +display-for(xs)
       :margin-right 0
 
+#navigation
+  .nav--main
+    :margin-bottom 60px

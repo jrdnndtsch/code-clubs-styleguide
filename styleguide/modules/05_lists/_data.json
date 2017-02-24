@@ -2,8 +2,12 @@
 	"id": "lists",
 	"name": "Lists",
 	"hasScript": "yes",
-	"items": {
-		"notOrdenated": "Unordered",
-		"ordenated": "Ordered"
-	}
+	"items": [
+		{
+			"name" : "Tag List",
+			"className" : "list--tags"
+		}
+
+	]
+	
 }

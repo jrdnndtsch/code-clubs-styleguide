@@ -1,3 +1,6 @@
+@import '../02_colors/colors.sass'
+@import '../10_grid/grid.sass'
+@import '../03_typography/typography.sass'
 =make-term-list
 	:display flex
 	:border-bottom 1px solid $light-grey
@@ -9,32 +12,6 @@ ol, ul
 	:margin 0 0 12px 0
 	:padding 0
 	:list-style none
-
-
-// TODO - waiting to see if this is needed ==================
-// ul.list
-// 	li
-// 		:padding-left 20px
-// 		:position relative
-// 		&:before
-// 			:content '•'
-// 			:font-size 24px
-// 			:top 0
-// 			:color $yellow
-// 			:position absolute
-// 			:left 0
-// 			:line-height 30px
-// ol.list
-// 	li
-// 		:counter-increment step-counter
-// 		:padding-left 20px
-// 		:position relative
-// 		&:before
-// 			:content counter(step-counter)
-// 			:position absolute
-// 			:top 0
-// 			:left 0
-// 			:color $yellow
 
 ul.list--tags
 	.title
@@ -53,9 +30,10 @@ ul.list--tags
 		:display inline-block
 		:margin-right 4px
 		:margin-bottom 4px
+		:line-height 20px
 		&:last-of-type
 			:margin-right 0	
-			
+
 .list--suggested-lessons-edit
 	li 
 		:margin-bottom 8px

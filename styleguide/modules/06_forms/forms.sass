@@ -1,5 +1,8 @@
 @import '../02_colors/colors.sass'
 @import '../10_grid/grid.sass'
+@import '../03_typography/typography.sass'
+
+
 select
 	:padding 6px 12px
 	:padding 6px 30px 6px 12px
@@ -10,32 +13,34 @@ select
 	:border-radius 0px
 	&:hover
 		:cursor pointer
+
 input, textarea, select
 	:width 100%
 	:padding 12px 6px
 	:border 1px solid $light-grey
 	:color black
-input[type=checkbox]
+input[type=checkbox], input[type=submit]
 	:width auto
-input[type=submit]
-	:width auto	
 input[type=file]
 	:background white	
-.hint
-	:margin-top -10px
-	:display block
-	:margin-bottom 10px
-.label-direction	
+
+// TODO - is this used =================	
+// .hint
+// 	:margin-top -10px
+// 	:display block
+// 	:margin-bottom 10px
+
+.label-direction	// additional instructions next to the label
 	:color $medium-grey
 	:font-size 14px
 	:font-weight lighter
 	:font-family $font-quicksand	
-.select2-container--default .select2-selection--multiple
+
+.select2-container--default .select2-selection--multiple // for multiple select
 	:border-radius 0px
 	:border 1px solid #ccc
 	:width 100%
 	:max-width 100%
-.select2
 
 .form--new-lesson .content, .lesson--single-sidebar
 	input, textarea, select
@@ -44,6 +49,10 @@ input[type=file]
 		:line-height 22px
 		:font-weight lighter
 		:font-family $font-quicksand
+	input.button
+		:line-height 18px
+		:font-weight bold
+		:font-family $font-llc	
 	.select
 		:position relative
 		:margin-bottom 20px
@@ -183,12 +192,16 @@ input[type=file]
 			&:last-of-type
 				:padding-right 0	
 
-//PROFILE
+
+
+
+//PROFILE =======================
 .form--profile			
 	label
 		:text-transform uppercase
 		:color #4C4C4C
 		:margin-bottom 12px
+		:font-weight 700
 	input, select, textarea
 		:margin-bottom 24px
 	label.required, span.required

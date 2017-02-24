@@ -1,4 +1,6 @@
+@import '../02_colors/colors.sass'
 @import '../10_grid/grid.sass'
+@import '../03_typography/typography.sass'
 
 //HOME
 .home--wrap
@@ -155,6 +157,7 @@
 	:padding 25px
 	:color white
 	:background $blue
+	:position relative
 	h2
 		:font-weight normal
 		:padding 0 4px
@@ -171,6 +174,40 @@
 		:border-bottom 1px solid white
 	h3, h4
 		:padding 10px 4px
+.lesson--single-verification-badge		
+	:position absolute
+	:width 220px
+	:right 10px
+	:top 52%
+	:transform translateY(-50%)
+	+display-for(sm xs)
+		:width 120px
+		:right 25px
+	+display-for(xs)	
+		:position static
+		:transform translateY(0)
+		:display block
+	.badge-box
+		:position relative
+		span 
+			:position absolute
+			:color $black	
+			:font-size 12px
+			:font-weight lighter
+			:font-family $font-quicksand
+			:width 110px
+			:text-align center
+			:left 50%
+			:transform translateX(-50%)
+			:top 110px
+		.badge--small
+			:display none
+			:width 120px
+		+display-for(sm xs)
+			.badge--full, span
+				:display none
+			.badge--small
+				:display block	
 .lesson--single-actions
 	:display flex
 	:align-items center
@@ -214,15 +251,22 @@
 .lesson--single-share 
 	:width 30%
 	:background $medium-grey
+	+display-for(sm xs)
+		:padding 6px 0
 .lesson--nav, .lesson--single-share 	
 	+display-for(md sm xs)
 		:width 100%
+.lesson--nav		
+	+display-for(sm xs)
+		:display none
 .lesson--nav-bar-sticky.wrapper	
 	:position fixed
 	:z-index 10	
 	:width 90%
 	:max-width 1146px
 	:top 0
+	+display-for(xs)
+		:padding 0
 
 .lesson--single-text
 	:background white
@@ -231,6 +275,7 @@
 	section 
 		.text-edit
 			:display none
+			:margin-top 20px
 .lesson--single-title-img
 	:width 30%
 	:background-size cover
@@ -310,19 +355,19 @@
 		:color $red
 		:margin-left 2px
 
-// BOX
-.box
-	:background white
-	:border-radius 5px
-	:width 60%
-	:max-width 600px
-	:margin 100px auto
-	:padding 25px
-	+display-for(sm xs)
-		:width 90%
+// TODO - check if removing this affects anything
+// .box
+// 	:background white
+// 	:border-radius 5px
+// 	:width 60%
+// 	:max-width 600px
+// 	:margin 100px auto
+// 	:padding 25px
+// 	+display-for(sm xs)
+// 		:width 90%
 
-.box--large
-	:width 80%
+// .box--large
+// 	:width 80%
 
 
 // TABS
@@ -446,8 +491,39 @@ ul.tabs
 	:border 1px solid $light-grey !important
 	:border-top none !important
 
-
-
+// BUTTON BOXES ===================================
+.button-boxes
+  :flex-wrap wrap
+  :justify-content space-between
+  >a
+    :width 30%
+    :text-align center 
+    :background rgba(0,0,0,0.8)
+    :padding 30px
+    :border 1px solid $yellow
+    :margin-bottom 80px
+    +display-for(sm xs)
+      :width 100%
+      :margin-bottom 20px
+    &:hover 
+      :border 1px solid $blue
+      .button--primary 
+        :background $blue
+        :border 2px solid $blue
+        :color white  
+  h2, h3 
+    :font-size 20px
+    :font-family $font-quicksand
+    :color white
+    :text-transform uppercase 
+    :font-weight lighter
+    :margin-top 0
+    :margin-bottom 20px
+  &--light 
+    >a
+      :background white 
+      h3
+        :color $black
 // MODALS =========================================
 .modal-fixed
   :position fixed

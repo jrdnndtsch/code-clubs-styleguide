@@ -1,15 +1,98 @@
 h2.huge-module__title=name
-div.container--style-guide
-nav.nav--main 
-	div.wrapper
-		span.logo
-			a
-		ul.nav--links
-			each link in items.navlinks
-				li
-					a #{link}
-			li
-				a 
-					img(src='http://localhost:3000/assets/avatar-a1077a7dc895698bf1f871aa89c3261b8da55a362a19e71d3a4ec03816f122e8.jpg') 
-					'Hi NatLongname'	
+h3 Main Navigation
+nav.nav--main
+  .wrapper.wrapper--flex
+    .logo-container
+      span.logo
+        a(href='/home')
+          img(src='http://teacherslearningcode.com/assets/tlc-oneline-white-8cd8e06af8d3076d7b1d42576f724aa7773134a78ea9d7944588f6de66b4a36f.svg', alt='Tlc oneline white 8cd8e06af8d3076d7b1d42576f724aa7773134a78ea9d7944588f6de66b4a36f')
+      a#nav-hamburger.nav--hamburger
+        span
+    ul.nav--links.wrapper--flex
+      li.nav--link-with-sub
+        a(href='/about')
+          span About
+          span.nav--link-arrow
+            i.fa.fa-sort-desc(aria-hidden='true')
+        ul.nav--links-sub.hidden
+          li
+            a(href='/about') How-To Guide
+          // <li><a href="#">F.A.Q.</a></li>
+          // <li><a href="#">More Resources</a></li>
+      li.nav--link-with-sub
+        a(href='/lessons')
+          span Lessons
+          span.nav--link-arrow
+            i.fa.fa-sort-desc(aria-hidden='true')
+      li
+        a(href='#') Workshops
+      li.nav--link-with-sub
+        a(href='/profiles/person')
+          span
+            span
+              img(src='http://s3.amazonaws.com/codeclubs-dev/profiles/avatars/000/000/001/thumbnail/thelma-and-louise.jpeg?1487633083', alt='Thelma and louise')
+            span
+              | Hi, Person
+          span.nav--link-arrow
+            i.fa.fa-sort-desc(aria-hidden='true')
+h3 Footer Navigation            	
+footer.nav--footer
+  .wrapper.wrapper--flex
+    ul.small-caps.main
+      li
+        h3 Contact Us
+      li
+        a(href='http://twitter.com/learningcode', target='_blank') twitter.com/learningcode
+      li
+        a(href='https://www.facebook.com/ladieslearningcode', target='_blank') fb.com/ladieslearningcode
+      li
+        a(href='https://www.instagram.com/learningcode/') instagram.com/learningcode
+      li
+        a(href='mailto:carolyn@ladieslearningcode.com') carolyn@ladieslearningcode.com
+    ul.small-caps.main
+      li
+        h3 Support Us
+      li
+        a(href='http://ladieslearningcode.myshopify.com/', target='_blank') Shop
+      li
+        a(href='http://ladieslearningcode.com/about/#sponsors') Sponsors
+      li
+        form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_blank')
+          input(type='hidden', name='cmd', value='_s-xclick')
+          input(type='hidden', name='hosted_button_id', value='36LEPAUDSAMJS')
+          input.button-link(type='submit', value='Donate Now')
+      li
+        a(href='http://ladieslearningcode.com/get-involved/') Get Involved
+      li
+        a(href='http://jobs.ladieslearningcode.com/', target='_blank') Job Board
+      li
+        a(href='http://ladieslearningcode.com/about#press') Press
+    .email-form
+      h3 Join Our Mailing List
+      p.small SIGN UP NOW TO STAY IN THE LOOP
+      form#new_mailing_list.new_mailing_list(action='/mailing_lists', accept-charset='UTF-8', method='post')
+        input(name='utf8', type='hidden', value='✓')
+        input(type='hidden', name='authenticity_token', value='nSWoyDTS0oF5XDh15wX+SB1PIpduqomP/IOzHfg3uVWGXn2UE3Tzl/O9cSZfvnpUfAHcZpqxKw6GM8WO6CSwuw==')
+        input#mailing_list_email(type='email', placeholder='enter email here', name='mailing_list[email]')
+        input.button.button--primary(type='submit', name='commit', value='subscribe')
+footer.nav--sponsor
+  .wrapper
+    .as--creds
+      p
+        | Development by 
+        a(href='http://upatfive.ca', target='_blank') Up at Five
+      p
+        | Design by 
+        a(href='http://natcooper.com', target='_blank') Nat Cooper
+      p
+        | © 
+        a(href='http://ladieslearningcode.com', target='_blank') Ladies Learning Code
+    .as--hashtag
+      img(src='http://teacherslearningcode.com/assets/tlc-hashtag-2117fec88be5b7c45be92001a61f011fa18971e8d8154fc858a1270ed4c5f6cf.svg', alt='Tlc hashtag 2117fec88be5b7c45be92001a61f011fa18971e8d8154fc858a1270ed4c5f6cf')
+    div
+      p in partnership with:
+      img(src='http://teacherslearningcode.com/assets/scotiabank-logo-white-601bfb51d6fe38b74d17deb350155aa43e2263d4647e5f428fc0a9f9641b5f38.svg', alt='Scotiabank logo white 601bfb51d6fe38b74d17deb350155aa43e2263d4647e5f428fc0a9f9641b5f38')
+
+    
+
 
