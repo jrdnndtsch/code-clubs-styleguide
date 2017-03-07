@@ -11,6 +11,14 @@
 		:width 100%
 		:top 0
 		:z-index 10
+	.landing-page--overlay
+		:position absolute
+		:background rgba(0,0,0,0.5)	
+		:top 0
+		:bottom 0
+		:left 0 
+		:right 0
+		:z-index 1
 	video
 		:min-height 100vh
 		:width auto
@@ -124,6 +132,12 @@
 				:left 0
 		.likes-count
 			:color white
+.button--action			
+	.lesson--likes
+		:right 10px
+		.ribbon
+			&:before, &:after
+				:border-bottom 10px solid $bg-grey 
 
 // SINGLE LESSON 	=======================================		
 
@@ -275,13 +289,19 @@
 	section 
 		.text-edit
 			:display none
-			:margin-top 20px
+			:padding 20px 12px
+			iframe 
+				:margin-top 20px
+			.button 
+				:margin-top 20px		
+		.text-edit.active 
+			:display block
 .lesson--single-title-img
 	:width 30%
 	:background-size cover
 	:background-position center
 	:background-repeat no-repeat
-	:background-color grey
+	:background-color $blue 
 	:position relative
 	+display-for(sm xs)
 		:height 200px
@@ -293,7 +313,6 @@
 	:padding 12px	
 	:position relative
 	:font-size 16px
-	:font-weight bold
 	:cursor pointer
 	&:hover
 		:background $blue
@@ -322,6 +341,20 @@
 			:padding 25px
 		+display-for(md sm xs)
 			:width 100%	
+		label, h3, .title
+			:text-transform uppercase
+			:font-size 16px
+		p 
+			:color $black	
+		.lesson--single-refs
+			:font-size 14px
+			a 
+				:color $blue	
+				:margin-bottom 12px
+				:display block
+			p 
+				:margin-bottom 0
+
 .form--new-lesson		
 	.content
 			:width 70%
@@ -337,6 +370,10 @@
 			:width 100%	
 	.wrapper--flex
 		:flex-wrap wrap			
+.lesson--single-verified-check
+	:color $blue	
+	:font-weight bold
+	:margin-left 10px
 
 .lesson--admin-edit
 	:background $bg-grey  			

@@ -14,14 +14,15 @@ ol, ul
 	:list-style none
 
 ul.list--tags
-	.title
+	li.title
 		:display block
 		:background transparent !important
-		:color #333
+		:color $black
 		:padding 0
-		:text-transform capitalize
+		:text-transform uppercase
 		:margin-bottom 10px
-		:font-size 20px
+		:font-size 16px
+		:font-family $font-llc
 	li
 		:padding 4px 6px
 		:background $blue
@@ -31,6 +32,8 @@ ul.list--tags
 		:margin-right 4px
 		:margin-bottom 4px
 		:line-height 20px
+		:font-family $font-quicksand
+		:font-size 14px
 		&:last-of-type
 			:margin-right 0	
 

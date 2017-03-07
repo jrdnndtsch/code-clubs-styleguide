@@ -22,7 +22,7 @@
     p 
       :font-size 16px  
 .as--about-wrap
-  :padding 45vh 0 15vh
+  :padding 45vh 0 10vh
   h1
     :color white
     :font-size 70px  
@@ -161,6 +161,7 @@
       :font-family $font-llc 
       :color $dark-grey 
       :flex 1 0 auto
+      :cursor pointer
     label
       :margin-bottom 0  
     span, div 
@@ -178,7 +179,7 @@
         :margin-right 6px    
 
 .wrapper.as--home-intro
-  :padding 25vh 30% 10vh 0
+  :padding 25vh 16% 10vh 0
   :color white
   +display-for(md sm xs)
     :padding 50px 20px 70px 20px
@@ -382,6 +383,8 @@ label[for=user_remember_me]
   i
     :line-height 46px
     :cursor pointer
+    &:hover 
+      :color $blue
   .list 
     :right 0
     :top 0
