@@ -407,7 +407,7 @@ label[for=user_remember_me]
 .slideThree 
   :width 140px
   :height 40px
-  :background #FBE7CF
+  :background #EEE
   :margin 20px auto
   :position relative
   :border-radius 50px
@@ -423,8 +423,8 @@ label[for=user_remember_me]
     :font-weight bold
     // :text-shadow 1px 1px 0px rgba(255,255,255,.15)
   &:before 
-    :content '✓'
-    :color green
+    :content 'PUBLIC'
+    :color $green
     :line-height 40px !important
     :position absolute
     :left 10px
@@ -448,7 +448,8 @@ label[for=user_remember_me]
   input[type=checkbox]
     :visibility hidden
     &:checked + label
-      :left: 66px
+      :left 66px
+      :background linear-gradient(top, #82BBA3, $green)
     
 
 /* end .slideThree */
