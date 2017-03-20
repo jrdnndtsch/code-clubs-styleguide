@@ -67,42 +67,14 @@
     :margin-top 60px 
 .as--about-page + .as--about-page
   :padding-top 0                 
-// .button-boxes
-//   :flex-wrap wrap
-//   :justify-content space-between
-//   >a
-//     :width 30%
-//     :text-align center 
-//     :background rgba(0,0,0,0.8)
-//     :padding 30px
-//     :border 1px solid $yellow
-//     :margin-bottom 80px
-//     +display-for(sm xs)
-//       :width 100%
-//       :margin-bottom 20px
-//     &:hover 
-//       :border 1px solid $blue
-//       .button--primary 
-//         :background $blue
-//         :border 2px solid $blue
-//         :color white  
-//   h2, h3 
-//     :font-size 20px
-//     :font-family $font-quicksand
-//     :color white
-//     :text-transform uppercase 
-//     :font-weight lighter
-//     :margin-top 0
-//     :margin-bottom 20px
-//   &--light 
-//     >a
-//       :background white 
-//       h3
-//         :color $black
+
 
      
 .as--header-link
   :color $yellow  
+.as--bookmark-button
+  @media print
+    :display none  
 
 .as--home-form
   :margin 60px 0 40px

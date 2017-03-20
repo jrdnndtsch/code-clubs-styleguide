@@ -53,6 +53,8 @@
       :width 26px
       :height 2px
 .nav--main
+  @media print 
+    :display none
   :background $black
   :line-height 30px
   .wrapper--flex
@@ -193,6 +195,8 @@
   +display-for(md sm xs)
     :display block
 footer.nav--footer
+  @media print
+    :display none
   :background $medium-grey
   :color white
   :padding 40px 0
@@ -262,6 +266,8 @@ footer.nav--footer
     form
       :display inline-block
 footer.nav--sponsor
+  @media print
+    :display none
   :padding 20px 0
   :background $black
   .wrapper

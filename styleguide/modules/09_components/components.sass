@@ -279,9 +279,12 @@
 	:background $medium-grey
 	+display-for(sm xs)
 		:padding 6px 0
+
 .lesson--nav, .lesson--single-share 	
 	+display-for(md sm xs)
 		:width 100%
+	@media print 
+		:display none		
 .lesson--nav		
 	+display-for(sm xs)
 		:display none
@@ -302,6 +305,8 @@
 		.text-edit
 			:display none
 			:padding 20px 12px
+			@media print 
+				:display block
 			iframe 
 				:margin-top 20px
 			.button 
@@ -544,7 +549,7 @@ ul.tabs
 .button-boxes
   :flex-wrap wrap
   :justify-content space-between
-  >a
+  >a, >div
     :width 30%
     :text-align center 
     :background rgba(0,0,0,0.8)
@@ -568,8 +573,11 @@ ul.tabs
     :font-weight lighter
     :margin-top 0
     :margin-bottom 20px
+  .title-break
+  	:max-width 150px
+  	:margin 0 auto 20px
   &--light 
-    >a
+    >a, >div
       :background white 
       h3
         :color $black
@@ -613,6 +621,8 @@ ul.tabs
 	:max-width 500px
 	input 
 		:margin-bottom 12px	
+
+
 
 
  	
